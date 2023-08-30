@@ -1,0 +1,41 @@
+.iconsSocial {
+  display: flex;
+  width: 35%;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 992px) {
+  .iconsSocial {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+    width: 80%;
+  }
+}
+
+.labels {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  margin: auto 20%;
+}
+
+.logo {
+  width: 10%;
+  text-align: center;
+  align-self: center;
+}
+
+.buttonnav {
+  background: #4b21ff;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 12rem;
+  height: 58.59px;
+  position: absolute;
+  bottom: 10px;
+}

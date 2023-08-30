@@ -1,0 +1,95 @@
+.titleBg {
+  position: absolute;
+  width: 30vw;
+  height: 184.69px;
+  right: 16px;
+  top: 300px;
+  background: rgba(74, 33, 255, 0.262);
+  filter: blur(93px);
+}
+
+.community {
+  width: 100%;
+  justify-content: left;
+  display: flex;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 992) {
+  .title {
+    font-family: "Raleway";
+    font-size: 20%;
+    background: red !important;
+  }
+
+  .titleBg {
+    left: 30px;
+  }
+
+  .community {
+    justify-content: center;
+    display: flex;
+    background: red;
+  }
+}
+
+.communityBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 35px;
+  font-size: 14px;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  background: #091136;
+  border: 2px solid #2e3b7d;
+  border-radius: 36.9017px;
+}
+
+.subHeading {
+  font-family: "Raleway" !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  color: #aab0fe !important;
+}
+
+.title {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 64px;
+  display: flex;
+  justify-content: left;
+}
+
+@media only screen and (max-width: 1280px) {
+  .emailInput {
+    margin: auto;
+    margin-top: 2rem;
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .emailInput {
+    margin: auto;
+    margin-top: 2rem;
+    width: 90% !important;
+  }
+}
+
+.emailInput {
+  display: flex;
+  width: 400px;
+  height: 58px;
+  padding: 27px 24px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(245, 242, 248, 0.25);
+  background: linear-gradient(0deg, #0b133b 0%, #0b133b 100%),
+    rgba(41, 54, 119, 0.2);
+  backdrop-filter: blur(2px);
+  justify-content: space-between;
+}
