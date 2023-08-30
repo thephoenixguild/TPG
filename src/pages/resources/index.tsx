@@ -32,6 +32,5 @@ export async function getServerSideProps() {
     const res = await fetch(`http://localhost:3000/api/notion`)
     const data = await res.json()
 
-    console.log(data, 'dataaa')
     return { props: { data } }
 }

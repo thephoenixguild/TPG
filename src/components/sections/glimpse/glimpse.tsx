@@ -19,7 +19,6 @@ const Glimpse: FC<GlimpseProps> = () => {
             then((response) => response.json())
             .then((result) => {
                 eventArr = result?.events;
-                console.log(eventArr, 'resultt')
                 let upcomingArr = eventArr.filter((eve: any) => eve?.ongoing);
                 let pastArr = eventArr.filter((eve: any) => !eve?.ongoing);
 

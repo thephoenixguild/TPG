@@ -8,7 +8,6 @@ const notion = new Client({ auth: notionSecret })
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-    console.log('from backend')
     if (!notionDatabaseId || !notionSecret) {
         throw new Error('Missing ids')
     }
@@ -28,16 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         return { resourceType, title, url };
     });
-
-
-    // Extract resource types' names
-    // const resourceTypeNames = resourceType.multi_select.map((item: any) => item.name);
-
-
-    // console.log(rows[0]?.Title?.title[0]?.plain_text, 'result for queryyy')
-
-    // console.log(rows[0]?.Title, 'from backedn')
-
 
     res.status(200).json({ data: data })
 }

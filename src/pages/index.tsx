@@ -11,38 +11,8 @@ import Team from '@/components/sections/team/team';
 import Roadmap from '@/components/sections/roadmap/roadmap';
 import WriteUs from '@/components/sections/write-us/write-us';
 import Footer from '@/components/sections/footer/footer';
-// import { useEffect, useState } from 'react';
-
-
-
-const fetchFromNotion = async () => {
-  const res = await import("./api/notion");
-  // const data = await (await res.handler()).json();
-  console.log(res, 'response')
-  // return data;
-}
 
 const Home = () => {
-
-  const data = (async function () {
-    return await fetchFromNotion();
-  })()
-
-  console.log(data, 'dattt')
-
-  // const [data, setData] = useState(null)
-
-  // useEffect(() => {
-  //   fetch('/api/hello')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log('from api call')
-  //     })
-  // }, [])
-
-  // useEffect(() => {
-  //   console.log(data, 'dataaaa')
-  // }, [data])
 
   return (
     <div className="App">
