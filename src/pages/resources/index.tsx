@@ -10,14 +10,14 @@ interface ResourcesProps {
     data: any
 }
 
-const Resources: FC<ResourcesProps> = ({ data }) => {
+const Resources: FC<ResourcesProps> = ({ data: { data } }) => {
 
 
     return <>
         <Layout>
             <NavBar />
             <ResourcesTitle />
-            <ResourcesAvailable notionResources={data?.data} />
+            <ResourcesAvailable notionResources={data} />
             <div className='mt-[20rem]'>
                 <Footer />
             </div>

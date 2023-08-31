@@ -15,10 +15,10 @@ const ResourcesAvailable: FC<ResourcesAvailableProps> = ({ notionResources }) =>
         <div className="mt-[2rem] flex mx-auto justify-center flex-wrap">
             <Row>
                 {notionResources?.length ?
-                    notionResources.map((resource: any) => <Col xl={3} lg={4} md={6} sm={12} xs={12}>
+                    notionResources.map((resource: any) => <Col className='my-[3rem]' xl={3} lg={4} md={6} sm={12} xs={12}>
                         <div onClick={() => window.open(resource?.url)}
-                            className="cursor-pointer hover:bg-[#0e1a4e] rounded-[1rem] mb-[2rem]
-                      min-h-[6rem] p-6 py-3 font-extrabold
+                            className="cursor-pointer h-[100%] hover:bg-[#0e1a4e] rounded-[1rem] mb-[2rem]
+                      min-h-[6rem] p-6 py-0 font-extrabold
                       mx-[0.6rem] border-[0.8px] border-solid text-white
                      bg-[#091136] border-[#f5f2f840] flex">
                             <div className='flex items-center pr-8'>
