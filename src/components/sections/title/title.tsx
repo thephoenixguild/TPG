@@ -5,7 +5,7 @@ import { Col, Row } from "react-bootstrap";
 import styles from "./title.module.scss";
 import { icons } from "../../icons/icons";
 import Image from "next/image";
-
+import { motion } from 'framer-motion'
 
 const Title = () => {
 
@@ -19,33 +19,55 @@ const Title = () => {
                     <Row className="flex items-center justify-between">
                         <Col lg={6} className="h-[100%] m-auto">
                             <div className="mt-[35%] sm:mt-[15%] xl:mt-[0%]">
-                                <p className="xl:flex xl:justify-start text-[#AAB0FE] text-[14px] text-center">WEB3 COMMUNITY</p>
+                                <motion.p
+                                    initial={{ opacity: 0, fontSize: '14px', transform: 'translateY(12px)' }}
+                                    animate={{ opacity: 1, fontSize: '14px', transform: 'translateY(0px)' }}
+                                    transition={{ duration: 0.3, ease: 'easeInOut', delay: 0 }}
+                                    className="xl:flex xl:justify-start text-[#AAB0FE] text-[14px] text-center">WEB3 COMMUNITY</motion.p>
                                 <div className="gradient" />
 
 
-                                <div className='text-center heading xl:flex xl:justify-start'>
+                                <motion.div
+                                    initial={{ opacity: 0, fontSize: '64px', transform: 'translateY(12px)' }}
+                                    animate={{ opacity: 1, fontSize: '64px', transform: 'translateY(0px)' }}
+                                    transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.1 }}
+                                    className='text-center heading xl:flex xl:justify-start'>
                                     The Phoenix Guild
-                                </div>
+                                </motion.div>
                                 <div className="xl:flex xl:justify-start text-[#aab0fe] text-[18px]">
-                                    <p className="lg:text-left lg:flex hidden">
+                                    <motion.div className="lg:text-left lg:flex hidden"
+                                        initial={{ opacity: 0, fontSize: '19px', transform: 'translateY(12px)' }}
+                                        animate={{ opacity: 1, fontSize: '19px', transform: 'translateY(0px)' }}
+                                        transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.2 }}>
                                         Onboarding a million women and non-binary #builders into the Web3 Ecosystem
-                                    </p>
-                                    <p className="text-center lg:hidden flex">
+                                    </motion.div>
+                                    <motion.div className="text-center lg:hidden flex"
+                                        initial={{ opacity: 0, fontSize: '18px', transform: 'translateY(20px)' }}
+                                        animate={{ opacity: 1, fontSize: '19px', transform: 'translateY(0px)' }}
+                                        transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.2 }}>
                                         Onboarding a million women and non-binary #builders into the Web3 Ecosystem
-                                    </p>
+                                    </motion.div>
                                 </div>
 
 
                                 <div className="xl:flex xl:mt-[5%] xl:justify-start block">
-                                    <div className={styles.emailInput} >
+                                    <motion.div
+                                        initial={{ opacity: 0, transform: 'translateY(12px)' }}
+                                        animate={{ opacity: 1, transform: 'translateY(0px)' }}
+                                        transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.3 }}
+                                        className={styles.emailInput} >
                                         {icons.msgIcon}
                                         <input
                                             className="w-[100%] border-0 h-[58px] cursor-pointer outline-0 text-[#AAB0FE] bg-transparent"
                                             placeholder="Enter your email address" />
-                                    </div>
-                                    <div onClick={() => window.open("https://t.me/thephoenixguild")} className="navBtn ml-6">
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, width: '167px', transform: 'translateY(12px)' }}
+                                        animate={{ opacity: 1, width: '177px', transform: 'translateY(0px)' }}
+                                        transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.3 }}
+                                        onClick={() => window.open("https://t.me/thephoenixguild")} className="navBtn ml-6">
                                         Get free resource!
-                                    </div>
+                                    </motion.div>
                                 </div>
 
                             </div>
