@@ -29,7 +29,7 @@ const ResourcesAvailable: FC<ResourcesAvailableProps> = ({ notionResources }) =>
                                     {resource?.title}
                                 </h5>
                                 <h5 className='text-[14px] mb-0 font-medium mt-2 text-[#4B21FF]'>
-                                    {resource?.resourceType.map((type: string) => <>{type},<br /></>)}
+                                    {resource?.resourceType.map((type: string) => <>{type},{" "}</>)}
                                 </h5>
                             </div>
                         </div>

@@ -5,7 +5,8 @@ const nextConfig = {
       "images.lumacdn.com",
       "images.unsplash.com",
       "cdn.lu.ma",
-      "images.hindustantimes.com"
+      "images.hindustantimes.com",
+      "static.toiimg.com"
     ],
   }
 }
