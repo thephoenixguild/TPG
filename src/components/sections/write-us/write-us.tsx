@@ -21,14 +21,14 @@ const WriteUs: FC<WriteUsProps> = () => {
                             <p>This text will be left-aligned in desktop.</p>
                         </div>
                     </div> */}
-                    <div className='w-[100%] m-auto items-center text-center text-[20px] mb-[4%] font-bold lg:hidden'>
+                    <div className='w-[100%] m-auto items-center text-white text-center text-[20px] mb-[4%] font-bold lg:hidden'>
                         Write to us and <br className='sm:hidden' />  we’ll reach out to you
                     </div>
-                    <p className="text-[#AAB0FE] text-[14px] lg:hidden xl:text-[20px] text-center mb-0 m-auto w-full">
+                    <p className=" text-[14px] lg:hidden xl:text-[20px] text-center mb-0 m-auto w-full">
                         Fill out the form, and we’ll reply to you soon.
                     </p>
                     {/* above lg here */}
-                    <div className='text-[36px] w-[100%] m-auto lg:text-left  mb-[4%] font-bold lg:flex hidden'>
+                    <div className='text-[36px] w-[100%] m-auto lg:text-left text-white  mb-[4%] font-bold lg:flex hidden'>
                         Write to us and <br className='sm:hidden' />  we’ll reach out to you
                     </div>
                     <p className="hidden lg:flex text-[#AAB0FE] text-[20px] xl:text-[20px]">

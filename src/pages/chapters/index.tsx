@@ -4,6 +4,7 @@ import { LinkedIcon, icons } from '@/components/icons/icons'
 import Layout from '@/components/layout/layout'
 import NavBar from '@/components/navbar/navbar'
 import Footer from '@/components/sections/footer/footer'
+import WriteUs from '@/components/sections/write-us/write-us'
 import Image from 'next/image'
 import { FC, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
@@ -74,14 +75,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -106,14 +107,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -138,14 +139,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -170,14 +171,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -202,14 +203,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -234,14 +235,14 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                 <h5 className='text-[24px] mb-0 font-bold'>
                                     Samrata
                                 </h5>
-                                <div className='flex justify-between pr-10 w-[70%]'>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                <div className='flex justify-between w-[60%]'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.insta}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.whatsapp}
                                     </div>
-                                    <div className='cursor-pointer mr-4 sm:mr-0'>
+                                    <div className='cursor-pointer mr-4 sm:mr-2'>
                                         {icons.linked}
                                     </div>
                                 </div>
@@ -250,8 +251,12 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                     </Col>
                 </Row>
             </div>
-
-            <div className='mt-[20rem]'>
+        </Layout>
+        <div className='mx-[-1rem] mb-[-4rem]'>
+            <WriteUs />
+        </div>
+        <Layout>
+            <div className='mt-[4rem]'>
                 <Footer />
             </div>
         </Layout>

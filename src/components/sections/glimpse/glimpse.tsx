@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
+import Events from '../events/events';
+import Layout from '@/components/layout/layout';
 
 interface GlimpseProps {
 }
@@ -28,22 +30,27 @@ const Glimpse: FC<GlimpseProps> = () => {
             .catch((err) => console.log(err));
     }, []);
 
-    return <div className='bg-[#0D0B4C] my-[4rem] py-[4rem]'>
-        <p className="xl:flex xl:justify-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] text-center mb-0 m-auto w-full">Achievements</p>
-        <div className='text-[24px] lg:text-[34px] xl:text-[44px] font-bold text-center xl:flex xl:justify-center'>
-            Glimpse of our past events<br />
-            and workshops
+    return <>
+        <Layout>
+            <Events events={events} loading={loading} />
+        </Layout>
+        <div className='bg-[#0D0B4C] my-[4rem] py-[4rem]'>
+            <p className="xl:flex xl:justify-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] text-center mb-0 m-auto w-full">Achievements</p>
+            <div className='text-[24px] lg:text-[34px] xl:text-[44px] font-bold text-center xl:flex xl:justify-center'>
+                Glimpse of our past events<br />
+                and workshops
+            </div>
+            <div className='flex my-[2rem] overflow-scroll'>
+                {events?.past.flat().map((event: any) =>
+                    <Image key={event?.url} className='p-2 border-2 border-gray-800 rounded-lg mx-2 object-cover'
+                        height={190} width={160}
+                        src={event?.cover} alt='venue' />)}
+            </div>
+            <div className="xl:flex xl:justify-center text-[#AAB0FE] text-[16px] lg:text-[18px] text-center mb-0 m-auto w-[90%] lg:w-[60%] xl:w-[70%]">
+                We firmly believe that impact can be created not just through awareness around education but by building the complete pipeline around it. Our programs are focused on practical hands-on knowledge and connecting women within our community with opportunities to actually work on production-ready Dapps
+            </div>
         </div>
-        <div className='flex my-[2rem] overflow-scroll'>
-            {events?.past.flat().map((event: any) =>
-                <Image key={event?.url} className='p-2 border-2 border-gray-800 rounded-lg mx-2 object-cover'
-                    height={190} width={160}
-                    src={event?.cover} alt='venue' />)}
-        </div>
-        <div className="xl:flex xl:justify-center text-[#AAB0FE] text-[16px] lg:text-[18px] text-center mb-0 m-auto w-[90%] lg:w-[60%] xl:w-[70%]">
-            We firmly believe that impact can be created not just through awareness around education but by building the complete pipeline around it. Our programs are focused on practical hands-on knowledge and connecting women within our community with opportunities to actually work on production-ready Dapps
-        </div>
-    </div>
+    </>
 }
 
 export default Glimpse

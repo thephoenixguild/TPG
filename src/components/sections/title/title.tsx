@@ -28,8 +28,8 @@ const Title = () => {
 
 
                                 <motion.div
-                                    initial={{ opacity: 0, fontSize: '64px', transform: 'translateY(12px)' }}
-                                    animate={{ opacity: 1, fontSize: '64px', transform: 'translateY(0px)' }}
+                                    initial={{ opacity: 0, fontSize: '44px', transform: 'translateY(12px)' }}
+                                    animate={{ opacity: 1, fontSize: '44px', transform: 'translateY(0px)' }}
                                     transition={{ duration: 0.3, ease: 'easeInOut', delay: 0.1 }}
                                     className='text-center heading xl:flex xl:justify-start'>
                                     The Phoenix Guild
