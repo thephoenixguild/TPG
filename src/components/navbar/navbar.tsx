@@ -15,7 +15,7 @@ const NavBar = () => {
     const [style, setStyle] = useState({ icon1: false, icon2: false, icon3: false });
 
     return (
-        <Navbar key={1} expand="lg" className="lg:mb-0 mb-[4rem]" >
+        <Navbar key={1} expand="lg" className="lg:mb-0 mb-[4rem] z-[1] relative" >
             <Container fluid className="mx-10">
                 <Navbar.Toggle aria-controls="navbarScroll">
                     {icons.hamburger}

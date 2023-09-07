@@ -508,7 +508,6 @@ body {
   width: 100%;
   height: auto;
   font-size: 16px;
-  font-family: Dubai-Light;
   background: rgba(30, 30, 30);
 }
 
@@ -1106,4 +1105,23 @@ body {
   .testim .cont div p {
     line-height: 25px;
   }
+}
+/* Define keyframes for the animation */
+@keyframes slideAndFade {
+  0% {
+    transform: translateX(0rem);
+    opacity: 1;
+    rotate: 10deg;
+  }
+  100% {
+    transform: translateX(-10rem);
+    opacity: 0;
+    rotate: -45deg;
+  }
+}
+
+/* Apply the animation to the .topCard element */
+.topCard {
+  opacity: 1;
+  animation: slideAndFade 0.7s ease-out;
 }

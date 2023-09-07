@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import styles from "./title.module.scss";
 import { icons } from "../../icons/icons";
@@ -9,8 +9,15 @@ import { motion } from 'framer-motion'
 
 const Title = () => {
 
+    const [showTopCard, setShowTopCard] = useState(false);
 
-    // const LottieFile = React.lazy(() => import('../body/desktopLottie'));
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setShowTopCard(!showTopCard);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [showTopCard]);
 
     return (
         <Row >
@@ -65,15 +72,31 @@ const Title = () => {
                                         initial={{ opacity: 0, width: '167px', transform: 'translateY(12px)' }}
                                         animate={{ opacity: 1, width: '177px', transform: 'translateY(0px)' }}
                                         transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.3 }}
-                                        onClick={() => window.open("https://t.me/thephoenixguild")} className="navBtn ml-6">
+                                        onClick={() => window.open("https://t.me/thephoenixguild")}
+                                        className="navBtn ml-6 relative z-[1]">
                                         Get free resource!
                                     </motion.div>
                                 </div>
 
                             </div>
                         </Col>
-                        <Col lg={6} xl={6} xxl={6} md={10} className="h-[100%] m-auto xl:flex xl:justify-end">
-                            {icons.dummy}
+                        <Col lg={6} xl={6} xxl={6} md={10} className="h-[30rem] m-auto xl:flex xl:justify-end">
+
+                            <Image src={'color-background.svg'} className="z-[0] relative" layout="fill" alt='background' />
+                            <div className="flex items-center relative">
+                                <div className="h-[10rem] w-[10rem] lg:h-[30rem] lg:w-[30rem]">
+                                    <img
+                                        alt='title' src={'title-card.svg'} className="absolute rotate-[17deg] " />
+                                    <img
+                                        alt='title' src={'title-card.svg'} className="absolute rotate-[10deg]" />
+                                    <motion.img
+                                        initial={{ opacity: 1, rotate: "10deg" }}
+                                        animate={{ opacity: 1, rotate: "0deg" }}
+                                        alt='title'
+                                        className={`absolute left-[2%] ${showTopCard ? 'topCard' : ''}`}
+                                        src={'title-card.svg'}
+                                    />   </div>
+                            </div>
                         </Col>
                     </Row>
                 </div>

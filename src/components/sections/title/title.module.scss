@@ -79,6 +79,8 @@
 }
 
 .emailInput {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 400px;
   height: 58px;
