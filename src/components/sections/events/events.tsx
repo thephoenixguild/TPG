@@ -21,10 +21,14 @@ const Events: FC<EventsProps> = ({ events, loading }) => {
     return (
         <div>
             <div className='mt-[4rem] sm:mt-[0rem]'>
-                <div style={{ margin: useWindowSize()?.width > 992 ? '0rem 4rem' : "0rem 1rem" }} className='subHeading'>
+                <div className='subHeading'>
                     Events
                 </div>
-                <div className='heading' style={{ justifyContent: 'left', display: 'flex', margin: useWindowSize()?.width > 992 ? '0rem 4rem' : "0rem 1rem" }}>
+                <div
+                    className='heading'
+                    style={{
+                        justifyContent: 'left', display: 'flex'
+                    }}>
                     Upcoming Events 2023
                 </div>
                 {loading ? 'Loading...' : <CarouselComponent

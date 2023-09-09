@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.1.10",
     "@notionhq/client": "^2.2.12",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
@@ -18,7 +19,8 @@
     "encoding": "^0.1.13",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
-    "framer-motion": "^10.16.2",
+    "framer-motion": "^10.16.4",
+    "lottie-react": "^2.4.0",
     "moment": "^2.29.4",
     "next": "13.4.16",
     "next-images": "^1.8.5",

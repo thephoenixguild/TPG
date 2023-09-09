@@ -1,108 +1,162 @@
-import Image from 'next/image'
-import { FC } from 'react'
-import { Col, Row } from 'react-bootstrap'
+'use client'
 
+import Image from 'next/image'
+import { FC, useEffect, useState } from 'react'
+import { Col, Row } from 'react-bootstrap'
+import TeamModal from './team-modal';
+import { icons } from '@/components/icons/icons';
 interface TeamProps {
 }
 
 const Team: FC<TeamProps> = () => {
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [showModal, setShowModal] = useState({ show: false, name: "" });
 
-    return <div className='my-[0rem] sm:my-[4rem] sm:py-[4rem]'>
-        <p className=" text-[#AAB0FE] text-[14px] sm:justify-start lg:text-[16px] xl:text-[18px] text-center m-auto">
-            Team
-        </p>
-        <div className='mb-[4rem] text-[24px] lg:text-[34px] xl:text-[44px] font-bold flex justify-center'>
-            Our core team
-        </div>
-        <Row>
 
-            <Col xl={2} lg={2} md={4} className='flex my-[2rem] justify-center sm:justify-start'>
-                <Image
-                    height={242} width={200} src='/srilakshmi.svg' alt='venue' />
+    useEffect(() => {
+        setIsLoading(true)
+    }, [])
 
-            </Col>
-            <Col xl={4} lg={4} md={8} className='flex items-center my-[2rem]  mt-[2rem] sm:mt-0 sm:mt-0'>
+    return (
+        <>
+            <div>
+                <p className=" text-[#AAB0FE] text-[14px] sm:justify-start lg:text-[16px] xl:text-[18px] text-left m-auto">
+                    Metrics
+                </p>
+                <div className='text-left mb-[4rem] text-[24px] lg:text-[34px] xl:text-[44px] font-bold w-[40%]'>
+                    What we have achieved so far
+                </div>
+
+                <div className='mb-[4rem]'>
+
+                    <div className="flex items-center">
+                        <div className="p-4 bg-[#EF2A82] w-full rounded-3xl mr-[2%] text-center">
+                            <h1 className='text-left font-bold text-[62px]'>
+                                200k+
+                            </h1>
+                            <h1 className='text-left font-bold text-[24px]'>
+                                Grants received
+                            </h1>
+                        </div>
+                        <div className="p-4 rounded-3xl text-center bg-[#A500C8] mr-[2%] w-[35rem]">
+                            <h1 className='text-left font-bold text-[62px]'>
+                                200k+
+                            </h1>
+                            <h1 className='text-left font-bold text-[24px]'>
+                                Grants received
+                            </h1>
+                        </div>
+                        <div className="p-4 w-full rounded-3xl bg-[#4B21FF] text-center ">
+                            <h1 className='text-left font-bold text-[62px]'>
+                                200k+
+                            </h1>
+                            <h1 className='text-left font-bold text-[24px]'>
+                                Grants received
+                            </h1>
+                        </div>
+                    </div>
+
+
+                    <div className="grid grid-cols-2 mt-[1rem] gap-4 grid-flow-row justify-center">
+                        <div className="p-4 bg-[#0EB30F] rounded-3xl text-center ">
+                            <h1 className='text-left font-bold text-[62px]'>
+                                200k+
+                            </h1>
+                            <h1 className='text-left font-bold text-[24px] flex items-center cursor-pointer'>
+                                Hackathon projects <span className='ml-6 cursor-pointer'>{icons.linkTo}</span>
+                            </h1>
+                        </div>
+                        <div className="p-4 rounded-3xl text-center bg-[#FF6702] ">
+                            <h1 className='text-left font-bold text-[62px]'>
+                                200k+
+                            </h1>
+                            <h1 className='text-left font-bold text-[24px]'>
+                                Grants received
+                            </h1>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p className=" text-[#AAB0FE] text-[14px] sm:justify-start lg:text-[16px] xl:text-[18px] text-center m-auto">
+                    Team
+                </p>
+                <div className='mb-[4rem] text-[24px] lg:text-[34px] xl:text-[44px] font-bold flex justify-center'>
+                    Our core team
+                </div>
                 <div>
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start'>
-                        Srilakshmi T.C
-                    </div>
-                    <div className="text-[#AAB0FE] text-[14px] flex justify-center sm:text-left lg:text-[16px] xl:text-[18px] font-medium m-auto">
-                        2+ years experience in Sales and Product development at Ted Baker, London; Club Monaco, London and EPIC Garments, Bangladesh. Previously co-founded Naksh - NFT Marketplace.
-                    </div>
-                </div>
-            </Col>
+
+                    <Row className='flex justify-center'>
+
+                        <Col xl={4} lg={4} md={4} className='my-[2rem]'>
+                            <div className='h-[25rem] w-[25rem] relative'>
+                                <Image layout='fill'
+                                    onClick={() => setShowModal({ ...showModal, name: 'srilakshmi', show: true })} src='/srilakshmi.svg'
+                                    className='cursor-pointer absolute z-20 ' alt='venue' />
+                            </div>
+                            <div>
+                                <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>CO-FOUNDER</h6>
+                                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
+
+                            </div>
+                        </Col>
 
 
-            <Col xl={2} lg={2} md={4} className='flex my-[2rem] justify-center sm:justify-start xl:mt-0'>
-                <Image
-                    height={242} width={200} src='/nivedita.svg' alt='venue' />
-            </Col>
-            <Col xl={4} lg={4} md={8} className='flex items-center my-[2rem] sm:mt-0'>
-                <div >
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start text-left '>
-                        Nivedita Vivek
-                    </div>
-                    <div className="text-[#AAB0FE] text-[14px] flex justify-center sm:text-left lg:text-[16px] xl:text-[18px] font-medium m-auto">
-                        2+ years experience in Sales and Project Manager at Luxottica, London; Liberty, London; Harrods, London and Panchajanya Fashions, Bangalore. Previously co-founded Naksh - NFT Marketplace.  </div>
-                </div>
-            </Col>
+                        <Col xl={4} lg={4} md={4} className='my-[2rem]  xl:mt-0'>
+                            <div className='h-[25rem] w-[25rem] relative'>
+                                <Image layout='fill'
+                                    onClick={() => setShowModal({ ...showModal, name: 'nivedita', show: true })} src='/nivedita.svg'
+                                    className='cursor-pointer absolute z-20' alt='venue' />
+                            </div>
+                            <div>
+                                <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>CO-FOUNDER</h6>
+                                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
 
-            <Col xl={2} lg={2} md={4} className='flex my-[2rem] justify-center sm:justify-start xl:mt-0'>
-                <Image
-                    height={242} width={200} src='/bhavya.svg' alt='venue' />
-            </Col>
-            <Col xl={4} lg={4} md={8} className='flex items-center my-[2rem] sm:mt-t '>
-                <div >
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start text-left '>
-                        Bhavya
-                    </div>
-                    <div className="text-[#AAB0FE] text-[14px] flex justify-center sm:text-left lg:text-[16px] xl:text-[18px] font-medium m-auto">
-                        2+ years experience in Software Development; Prev web3 exp at PolygonDAO, Buildspace and Reneverse; Founder at Social3 - web3 linkedin
-                    </div>
-                </div>
-            </Col>
 
-            <Col xl={2} lg={2} md={4} className='flex my-[2rem] justify-center sm:justify-start xl:mt-0'>
-                <Image
-                    height={242} width={200} src='/gnana.svg' alt='venue' />
-            </Col>
-            <Col xl={4} lg={4} md={8} className='flex items-center my-[2rem]'>
-                <div >
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start text-left '>
-                        Gnana Lakshmi
-                    </div>
-                    <div className="text-[#AAB0FE] text-[14px] flex justify-center sm:text-left lg:text-[16px] xl:text-[18px] font-medium m-auto">
-                        10+ years experience in Software Development, education and building developer communities; Worked with Oracle, VMWare, Wiley Publications, Coinfantasy, Metacrafters and currently as a DevRel with StarkWare.    </div>
-                </div>
-            </Col>
-            {/* <Col xl={6} className='flex xl:pt-[2%]'>
-                <Image
-                    height={242} width={200} src='/bhavya.svg' alt='venue' />
-                <div >
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start text-left '>
-                        Bhavya
-                    </div>
-                    <p className=" text-[#AAB0FE] text-[14px] flex justify-center sm:justify-start lg:text-[16px]
-                 xl:text-[18px] font-medium m-auto">
-                        2+ years experience in Software Development; Prev web3 exp at PolygonDAO, Buildspace and Reneverse; Founder at Social3 - web3 linkedin    </p>
-                </div>
-            </Col>
-            <Col xl={6} className='flex xl:pt-[2%]'>
-                <Image
-                    height={242} width={200} src='/gnana.svg' alt='venue' />
-                <div >
-                    <div className='text-[18px] lg:text-[34px] xl:text-[24px] font-bold flex justify-center sm:justify-start text-left '>
-                        Gnana Lakshmi
-                    </div>
-                    <p className=" text-[#AAB0FE] text-[14px] flex justify-center sm:justify-start lg:text-[16px]
-                 xl:text-[18px] font-medium m-auto">
-                        10+ years experience in Software Development, education and building developer communities; Worked with Oracle, VMWare, Wiley Publications, Coinfantasy, Metacrafters and currently as a DevRel with StarkWare.    </p>
-                </div>
-            </Col> */}
+                            </div>
+                        </Col>
 
-        </Row>
-    </div>
+                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                            <div className='h-[25rem] w-[25rem] relative'>
+                                <Image layout='fill' onClick={() => setShowModal({ ...showModal, name: 'bhavya', show: true })} src='/bhavya.svg' className='cursor-pointer absolute z-20' alt='venue' />
+                            </div>
+                            <div>
+                                <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>CHIEF STRATEGY OFFICER</h6>
+                                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
+
+                            </div>
+                        </Col>
+
+                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                            <div className='h-[25rem] w-[25rem] relative'>
+                                <Image layout='fill' onClick={() => setShowModal({ ...showModal, name: 'gnana', show: true })} src='/gnana.svg' className='cursor-pointer absolute z-20' alt='venue' />
+                            </div>
+                            <div>
+                                <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>TECHNICAL ADVISOR</h6>
+                                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
+
+                            </div>
+                        </Col>
+
+                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                            <div className='h-[25rem] w-[25rem] relative'>
+                                <Image layout='fill' onClick={() => setShowModal({ ...showModal, name: 'neda', show: true })} src='/neda.svg' className='cursor-pointer absolute z-20' alt='venue' />
+                            </div>
+                            <div>
+                                <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>HEAD OF OPERATIONS</h6>
+                                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
+
+                            </div>
+                        </Col>
+
+                    </Row>
+                </div >
+
+            </div >
+            <TeamModal showModal={showModal} setShowModal={setShowModal} />
+        </>
+    )
 }
 
 export default Team

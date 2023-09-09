@@ -1,0 +1,21 @@
+.modalImg {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.iconsSocial {
+  display: flex;
+  width: 35%;
+  justify-content: start;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .iconsSocial {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    width: 100%;
+  }
+}

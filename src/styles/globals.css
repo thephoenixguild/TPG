@@ -1125,3 +1125,37 @@ body {
   opacity: 1;
   animation: slideAndFade 0.7s ease-out;
 }
+
+.modal-dialog {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+}
+.modal-content {
+  width: fit-content !important;
+  background: transparent !important;
+}
+.modal-dialog .modal-body {
+  padding: 0px !important;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background: #0a1136 !important;
+}
+
+a.dropdown-item {
+  cursor: pointer;
+  color: #aab0fe;
+  padding: 1rem 1rem;
+}
+a.dropdown-item:hover {
+  color: #aab0fe;
+}
+a.dropdown-item:hover {
+  background: #0e184d !important;
+}
+
+.teamGlobal {
+  background: url("/matt.svg");
+  background-position: top !important;
+}

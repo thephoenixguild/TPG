@@ -32,17 +32,45 @@ const NavBar = () => {
                             top: window.innerWidth < 600 ? 680 : 1900,
                             behavior: 'smooth'
                         })}>Events</Nav.Link>
+                        <NavDropdown title="About TPG" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.2">
+                                Achievements
+                            </NavDropdown.Item>
 
-                        <Nav.Link href="#action2"
-                            onClick={() => window.scrollTo({
-                                top: window.innerWidth < 600 ? 800 : 2050,
-                                behavior: 'smooth'
-                            })}
-                        >Achievements</Nav.Link>
+                            <NavDropdown.Item href="#action/3.3">
+                                Core team
+                            </NavDropdown.Item>
 
-                        <Nav.Link onClick={() => router.push("/chapters")}>
+                            <NavDropdown.Item href="#action/3.4">
+                                Our journey so far
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.4">
+                                Roadmap
+                            </NavDropdown.Item>
+                        </NavDropdown>
+
+                        {/* <Nav.Link onClick={() => router.push("/chapters")}>
                             <div className="flex self-center items-center justify-center">TPG Chapters <span className="ml-2">{icons.downChevron}</span></div>
-                        </Nav.Link>
+                        </Nav.Link> */}
+
+                        <NavDropdown onClick={() => router.push('/chapters')} title="TPG Chapters" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.2">
+                                Achievements
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.3">
+                                Core team
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.4">
+                                Our journey so far
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.4">
+                                Roadmap
+                            </NavDropdown.Item>
+                        </NavDropdown>
 
                         <Nav.Link href="#action3" onClick={() => window.scrollTo({
                             top: 3500,

@@ -27,11 +27,7 @@ import Marquee from 'react-fast-marquee';
 function Brands() {
     return (
         <div style={{ marginBottom: '4rem' }}>
-            <div className='heading'
-                style={{
-                    textAlign: 'left',
-                    padding: '2%'
-                }}>
+            <div className='heading text-left p-[2%] mx-[3%]'>
                 Our Supporters
             </div>
             <div className={styles.brands}>

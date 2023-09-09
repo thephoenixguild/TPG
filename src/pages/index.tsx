@@ -28,7 +28,7 @@ const Home = () => {
           <Body />
         </Layout>
         <Glimpse />
-        <Layout>
+        <Layout matt={true}>
           <Team />
         </Layout>
         <Roadmap />

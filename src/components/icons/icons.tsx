@@ -2888,6 +2888,28 @@ function MobileRoadmap() {
     );
 }
 
+function LinkTo() {
+    return (
+        <svg
+            className="cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            fill="none"
+            viewBox="0 0 22 22"
+        >
+            <path
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M17.667 12.111v6.667A2.223 2.223 0 0115.444 21H3.222A2.222 2.222 0 011 18.778V6.556a2.222 2.222 0 012.222-2.223H9.89M14.334 1H21v6.667M8.778 13.222L21 1"
+            ></path>
+        </svg>
+    );
+}
+
+
 function WhatsappIcon() {
     return (
         <svg
@@ -3161,8 +3183,9 @@ export const icons = {
     recorder: <VideoRecorderIcon />,
     downChevron: <DownChevron />,
     tpgAvatar: <TPGChapterAvatar />,
-    linked: <Linked />,
-    feedbackBox: <FeedbackBox />
+    linked: <LinkedIcon />,
+    feedbackBox: <FeedbackBox />,
+    linkTo: <LinkTo />
 }
 
 

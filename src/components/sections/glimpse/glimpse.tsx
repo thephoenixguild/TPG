@@ -34,7 +34,7 @@ const Glimpse: FC<GlimpseProps> = () => {
         <Layout>
             <Events events={events} loading={loading} />
         </Layout>
-        <div className='bg-[#0D0B4C] my-[4rem] py-[4rem]'>
+        <div className='bg-[#0D0B4C] py-[4rem]'>
             <p className="xl:flex xl:justify-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] text-center mb-0 m-auto w-full">Achievements</p>
             <div className='text-[24px] lg:text-[34px] xl:text-[44px] font-bold text-center xl:flex xl:justify-center'>
                 Glimpse of our past events<br />

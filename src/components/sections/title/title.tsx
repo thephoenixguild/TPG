@@ -6,6 +6,7 @@ import styles from "./title.module.scss";
 import { icons } from "../../icons/icons";
 import Image from "next/image";
 import { motion } from 'framer-motion'
+import CustomImage from "./image-team";
 
 const Title = () => {
 
@@ -80,22 +81,32 @@ const Title = () => {
 
                             </div>
                         </Col>
-                        <Col lg={6} xl={6} xxl={6} md={10} className="h-[30rem] m-auto xl:flex xl:justify-end">
+                        <Col lg={6} xl={6} xxl={6} md={10} className="h-[30rem] m-auto xl:flex xl:justify-left">
 
                             <Image src={'color-background.svg'} className="z-[0] relative" layout="fill" alt='background' />
-                            <div className="flex items-center relative">
-                                <div className="h-[10rem] w-[10rem] lg:h-[30rem] lg:w-[30rem]">
-                                    <img
-                                        alt='title' src={'title-card.svg'} className="absolute rotate-[17deg] " />
-                                    <img
-                                        alt='title' src={'title-card.svg'} className="absolute rotate-[10deg]" />
+                            <div className="flex items-center relative top-[50%] xl:top-[0%]
+                             left-[15%] sm:left-[20%] lg:left-[35%] xl:left-[38%] xxl:left-[70%]">
+                                <CustomImage
+                                    className="!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] rotate-[30deg]" url="title-card.svg" />
+                                <CustomImage
+                                    className="!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] rotate-[17deg]" url="title-card.svg" />
+                                <CustomImage
+                                    className={`!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] left-[2%] ${showTopCard ? 'topCard' : ''}`}
+                                    url="title-card.svg" />
+                                {/* <div className="h-[1rem] w-[1rem] lg:h-[30rem] lg:w-[30rem]">
+                                    <Image
+                                        alt='title' src={'title-card.svg'} className="absolute h-[20rem] rotate-[17deg] " />
+                                    <Image
+                                        alt='title' src={'title-card.svg'} className="absolute h-[20rem] rotate-[10deg]" />
                                     <motion.img
                                         initial={{ opacity: 1, rotate: "10deg" }}
                                         animate={{ opacity: 1, rotate: "0deg" }}
                                         alt='title'
-                                        className={`absolute left-[2%] ${showTopCard ? 'topCard' : ''}`}
+                                        className={`absolute h-[20rem] left-[2%] ${showTopCard ? 'topCard' : ''}`}
                                         src={'title-card.svg'}
-                                    />   </div>
+                                    />
+                                </div> */}
+
                             </div>
                         </Col>
                     </Row>
