@@ -48,13 +48,13 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                 <div
                     className="md:hidden text-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] font-medium"
                 >
-                    Welcome to our community meetup for NFT collectors! This is a gathering of like-minded individuals who share a passion for digital art, blockchain technology, and the emerging world of non-fungible tokens.
-                </div>
+                    The Phoenix Guild is a community-centric company focused on creating meaningful and quality learning resources in the Web3 ecosystem.
+                    Our mission is to Onboard a million diverse #builders into the Web3 Ecosystem and Educate them about the technology and opportunities in the Web3 space.     </div>
                 <div
                     className="hidden md:text-left md:flex text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] font-medium"
                 >
-                    Welcome to our community meetup for NFT collectors! This is a gathering of like-minded individuals who share a passion for digital art, blockchain technology, and the emerging world of non-fungible tokens.
-                </div>
+                    The Phoenix Guild is a community-centric company focused on creating meaningful and quality learning resources in the Web3 ecosystem.
+                    Our mission is to Onboard a million diverse #builders into the Web3 Ecosystem and Educate them about the technology and opportunities in the Web3 space.    </div>
 
                 <Row className="mt-4 justify-content-center">
                     <Col md={6} lg={4} sm={12} className="mb-4 cursor-pointer ">
