@@ -21,7 +21,7 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="navbarScroll">
                     {icons.hamburger}
                 </Navbar.Toggle>
-                <div className="flex items-center relative lg:bottom-0 bottom-3 mx-auto pl-4 cursor-pointer" onClick={() => router.push('/')}>
+                <div className="flex items-center relative lg:bottom-0 bottom-3 mx-auto pl-4" onClick={() => router.push('/')}>
                     <Navbar.Brand className="relative right-2">{icons.phoenixLogo} </Navbar.Brand>
                 </div>
                 <Navbar.Collapse id="navbarScroll">
@@ -29,10 +29,6 @@ const NavBar = () => {
                         className="me-auto my-2 my-lg-0 navvRes"
                         navbarScroll
                     >
-                        <Nav.Link style={{ textDecoration: 'none' }} href="#action1" onClick={() => window.scrollTo({
-                            top: window.innerWidth < 600 ? 680 : 1900,
-                            behavior: 'smooth'
-                        })}>Events</Nav.Link>
                         <NavDropdown title="About TPG" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.2">
                                 Achievements
@@ -55,68 +51,65 @@ const NavBar = () => {
                             <div className="flex self-center items-center justify-center">TPG Chapters <span className="ml-2">{icons.downChevron}</span></div>
                         </Nav.Link> */}
 
-                        <NavDropdown title="TPG Chapters" id="basic-nav-dropdown">
-                            <Link style={{ textDecoration: 'none' }} href={'ahmedabad'}>
+                        <NavDropdown
+                            title="TPG Chapters"
+                            id="basic-nav-dropdown">
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/ahmedabad'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Ahmedabad
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'bhopal'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/bhopal'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Bhopal
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'chennai'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/chennai'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Chennai
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'delhi'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/delhi'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Delhi
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'hyderabad'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/hyderabad'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Hyderabad
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'jaipur'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/jaipur'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Jaipur
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'karnataka'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/karnataka'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Karnataka
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'kerala'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/kerala'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Kerala
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'kolkata'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/kolkata'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Kolkata
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'pune'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/pune'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Pune
                                 </NavDropdown.Item>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} href={'kualalumpur'}>
+                            <Link style={{ textDecoration: 'none' }} href={'/chapters/kualalumpur'}>
                                 <NavDropdown.Item href="#action/3.2">
                                     Kuala Lumpur
                                 </NavDropdown.Item>
                             </Link>
                         </NavDropdown>
-
-                        <Nav.Link style={{ textDecoration: 'none' }} href="#action3" onClick={() => window.scrollTo({
-                            top: 3500,
-                            behavior: 'smooth'
-                        })} >Our team</Nav.Link>
 
                         <Nav.Link onClick={() => router.push("/resources")} >Resources</Nav.Link>
 

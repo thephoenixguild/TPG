@@ -166,14 +166,14 @@ export const InstaIcon = ({ hovered }: any) => {
     )
 }
 
-export const LinkedIcon = ({ hovered }: any) => {
+export const LinkedIcon = ({ modal, hovered }: any) => {
 
 
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
+            width={modal ? "34" : "44"}
+            height={modal ? "34" : "45"}
             fill={hovered ? "#0072b1" : "none"}
             viewBox="0 0 32 32"
         >

@@ -11,6 +11,7 @@ interface ResourcesAvailableProps {
 const ResourcesAvailable: FC<ResourcesAvailableProps> = ({ notionResources }) => {
 
 
+
     return <div>
         <div className="mt-[2rem] flex mx-auto justify-center flex-wrap">
             <Row>

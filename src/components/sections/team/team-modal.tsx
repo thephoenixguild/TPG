@@ -3,7 +3,7 @@ import React from "react";
 import styles from './team.module.scss'
 import { InstaIcon, LinkedIcon, TwitterIcon } from "@/components/icons/icons";
 
-export default function TeamModal({ showModal, setShowModal }: any) {
+export default function TeamModal({ showModal, setShowModal, twitter, linkedin, memberName, description }: any) {
     return (
         <>
             {/* <button
@@ -32,7 +32,7 @@ export default function TeamModal({ showModal, setShowModal }: any) {
                                     <div className="p-10">
 
                                         <div className="flex justify-between">
-                                            <h2 className="text-left font-extrabold">Srilakshmi T.C</h2>
+                                            <h2 className="text-left font-extrabold">{memberName}</h2>
 
                                             <Image
                                                 onClick={() => setShowModal({ ...showModal, show: false })}
@@ -44,27 +44,20 @@ export default function TeamModal({ showModal, setShowModal }: any) {
                                         <h6 className="text-left text-[#EF2A82] mb-[2rem]">CO-FOUNDER</h6>
 
                                         <h5 className="text-[#AAB0FE] text-[18px] text-left w-[90%]">
-                                            Handles partnerships and marketing. 2+ years experience in Sales and Product
-                                            development at Ted Baker, London; Club Monaco, London and EPIC Garments, Bangladesh.
-                                            Previously co-founded Naksh - NFT Marketplace. Works on Branding, business development ,
-                                            strategic partnerships and Design.
+                                            {description}
                                         </h5>
 
                                         <div
                                             className={styles.iconsSocial}>
                                             <div
-                                                className="mr-4" onClick={() => window.open('https://www.linkedin.com/company/the-phoenix-guild/?viewAsMember=true')}>
-                                                <LinkedIcon />
+                                                className="mr-4" onClick={() => window.open(linkedin)}>
+                                                <LinkedIcon modal />
                                             </div>
                                             <div
 
-                                                className="mr-4" onClick={() => window.open('https://twitter.com/PhoenixGuildHQ')}>
+                                                className="mr-4" onClick={() => window.open(twitter)}>
                                                 <TwitterIcon />
 
-                                            </div>
-                                            <div
-                                                className="mr-4" onClick={() => window.open('https://instagram.com/phoenixguildhq?igshid=YmMyMTA2M2Y=')}>
-                                                <InstaIcon />
                                             </div>
                                         </div>
                                     </div>

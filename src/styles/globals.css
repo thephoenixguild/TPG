@@ -1124,6 +1124,16 @@ body {
 .topCard {
   opacity: 1;
   animation: slideAndFade 0.7s ease-out;
+  border-radius: 22px;
+  border: 8px solid rgba(72, 89, 172, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.topCard2 {
+  border-radius: 22px;
+  border: 8px solid rgba(72, 89, 172, 0.2);
+  backdrop-filter: blur(5px);
+  transition: 1s ease-in;
 }
 
 .modal-dialog {
@@ -1141,6 +1151,8 @@ body {
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   background: #0a1136 !important;
+  max-height: 20rem !important;
+  overflow-y: scroll !important;
 }
 
 a.dropdown-item {

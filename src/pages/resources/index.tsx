@@ -16,8 +16,7 @@ const Resources: FC<ResourcesProps> = ({ data: { data } }) => {
     return <>
         <Layout>
             <NavBar />
-            <ResourcesTitle />
-            <ResourcesAvailable notionResources={data} />
+            <ResourcesTitle notionResources={data} />
             <div className='mt-[20rem]'>
                 <Footer />
             </div>

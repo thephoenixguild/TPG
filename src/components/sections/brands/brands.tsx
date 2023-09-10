@@ -32,36 +32,44 @@ function Brands() {
             </div>
             <div className={styles.brands}>
                 <div className='flex py-[2rem]'>
-                    <Image src={Biconomy} style={{ marginRight: "5%" }}
-                        alt="Biconomy logo" />
-                    <Image src={NFTstorage} style={{ marginRight: "5%" }}
-                        alt="NFTstorage logo" />
-                    <Image src={arcana} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={TableLand} style={{ marginRight: "5%" }}
-                        alt="Biconomy logo" />
-                    <Image src={near} style={{ marginRight: "5%" }}
-                        alt="NFTstorage logo" />
-                    <Image src={ocean} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={starkware} style={{ marginRight: "5%" }}
-                        alt="NFTstorage logo" />
-                    <Image src={devfolio} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={hedera} style={{ marginRight: "5%" }}
-                        alt="Biconomy logo" />
-                    <Image src={filecoin} style={{ marginRight: "5%" }}
-                        alt="NFTstorage logo" />
-                    <Image src={chingari} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={chainlink} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={aptos} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={ecosystem} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
-                    <Image src={covalent} style={{ marginRight: "5%" }}
-                        alt="arcana logo" />
+                    <div className={styles.slider}>
+                        <div className={styles.slideTrack}>
+
+                            <Image className={styles.slide} src={devfolio} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={hedera} style={{ marginRight: "5%" }}
+                                alt="Biconomy logo" />
+                            <Image className={styles.slide} src={filecoin} style={{ marginRight: "5%" }}
+                                alt="NFTstorage logo" />
+                            <Image className={styles.slide} src={chingari} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={chainlink} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={aptos} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={ecosystem} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={covalent} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={Biconomy} style={{ marginRight: "5%" }}
+                                alt="Biconomy logo" />
+                            <Image className={styles.slide} src={NFTstorage} style={{ marginRight: "5%" }}
+                                alt="NFTstorage logo" />
+                            <Image className={styles.slide} src={arcana} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={TableLand} style={{ marginRight: "5%" }}
+                                alt="Biconomy logo" />
+                            <Image className={styles.slide} src={near} style={{ marginRight: "5%" }}
+                                alt="NFTstorage logo" />
+                            <Image className={styles.slide} src={ocean} style={{ marginRight: "5%" }}
+                                alt="arcana logo" />
+                            <Image className={styles.slide} src={starkware} style={{ marginRight: "5%" }}
+                                alt="NFTstorage logo" />
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>

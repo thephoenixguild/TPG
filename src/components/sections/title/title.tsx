@@ -11,14 +11,36 @@ import CustomImage from "./image-team";
 const Title = () => {
 
     const [showTopCard, setShowTopCard] = useState(false);
+    const [value, setValue] = useState(1);
 
     useEffect(() => {
+
         const timer = setInterval(() => {
             setShowTopCard(!showTopCard);
-        }, 3000);
+        }, 2000);
 
         return () => clearTimeout(timer);
+
     }, [showTopCard]);
+
+
+    useEffect(() => {
+        console.log(value);
+
+        const intervalId = setInterval(() => {
+            if (value === 3) {
+                setValue(2);
+            } else if (value === 2) {
+                setValue(1);
+            } else {
+                setValue(3);
+            }
+        }, 3000);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
 
     return (
         <Row >
@@ -83,16 +105,52 @@ const Title = () => {
                         </Col>
                         <Col lg={6} xl={6} xxl={6} md={10} className="h-[30rem] m-auto xl:flex xl:justify-left">
 
-                            <Image src={'color-background.svg'} className="z-[0] relative" layout="fill" alt='background' />
+                            <Image src={'color-background.svg'} className="z-[0] right-[10%] absolute" layout="fill" alt='background' />
                             <div className="flex items-center relative top-[50%] xl:top-[0%]
-                             left-[15%] sm:left-[20%] lg:left-[35%] xl:left-[38%] xxl:left-[70%]">
+                             left-[15%] sm:left-[20%] lg:left-[35%] xl:left-[35%] xxl:left-[70%]">
                                 <CustomImage
-                                    className="!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] rotate-[30deg]" url="title-card.svg" />
+                                    imageClassName="rounded-3xl"
+                                    className={`!absolute h-[23rem] w-[26rem] rotate-[22deg] topCard2`}
+                                    url="/eth.png" />
+                                <div className={styles.cardSub}>
+                                    <div className="flex items-center justify-start w-[80%] text-[1.4rem]">
+                                        TPG at ETH India <span className="pl-4">{icons.linkTo}</span>
+                                    </div>
+                                    <div className="pt-[4%] flex justify-start">
+                                        <Image alt='location' height={20} width={20} src="/location.svg" />
+                                        <span className="pl-[2%] text-gray-400">Bangalore, India </span>
+                                    </div>
+                                </div>
+
                                 <CustomImage
-                                    className="!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] rotate-[17deg]" url="title-card.svg" />
+                                    imageClassName="rounded-3xl"
+                                    className={`!absolute h-[23rem] w-[26rem] rotate-[12deg] topCard2`}
+                                    url="/zkDay.png" />
+                                <div className={styles.cardSub}>
+                                    <div className="flex items-center justify-start w-[80%] text-[1.4rem]">
+                                        ZK Day <span className="pl-4">{icons.linkTo}</span>
+                                    </div>
+                                    <div className="pt-[4%] flex justify-start">
+                                        <Image alt='location' height={20} width={20} src="/location.svg" />
+                                        <span className="pl-[2%] text-gray-400"> Istanbul, Turkey </span>
+                                    </div>
+                                </div>
+
                                 <CustomImage
-                                    className={`!absolute h-[16rem] w-[16rem] sm:h-[22rem]  sm:w-[22rem] left-[2%] ${showTopCard ? 'topCard' : ''}`}
-                                    url="title-card.svg" />
+                                    imageClassName="rounded-3xl"
+                                    className={`!absolute h-[23rem] w-[26rem] left-[2%] ${showTopCard ? 'topCard' : 'topCard2'}`}
+                                    url="/Buildathon.png" />
+                                <div className={showTopCard ? styles.cardSubAnim : styles.cardSub}>
+                                    <div className="flex items-center justify-start w-[80%] text-[1.4rem]">
+                                        Build-a-thon  <span className="pl-4">{icons.linkTo}</span>
+                                    </div>
+                                    <div className="pt-[4%] flex justify-start">
+                                        <Image alt='location' height={20} width={20} src="/location.svg" />
+                                        <span className="pl-[2%] text-gray-400"> Kochi , Kerala</span>
+                                    </div>
+                                </div>
+
+
                                 {/* <div className="h-[1rem] w-[1rem] lg:h-[30rem] lg:w-[30rem]">
                                     <Image
                                         alt='title' src={'title-card.svg'} className="absolute h-[20rem] rotate-[17deg] " />
