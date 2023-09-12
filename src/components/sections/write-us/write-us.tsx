@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import complete from './complete.json'
+import { useRouter } from 'next/router'
 
 interface WriteUsProps {
 
@@ -13,9 +14,10 @@ const WriteUs: FC<WriteUsProps> = () => {
 
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [formResponse, setFormResponse] = useState<any>(null);
+    const location = useRouter().query.slug;
 
     async function sendFeedback() {
-        const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/sendTPGFeedback?location=chennai`;
+        const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/sendTPGFeedback${location ? `?location=${location}` : ""}`;
 
 
         try {
@@ -86,16 +88,16 @@ const WriteUs: FC<WriteUsProps> = () => {
                 {!formResponse?.message ? <>
                     <input placeholder='Enter your name'
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className='p-4 h-[3.8rem] border-opacity-40 w-[100%] lg:w-[70%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
+                        className='text-white p-4 h-[3.8rem] border-opacity-40 w-[100%] lg:w-[70%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
 
                     <input
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder='Enter mail address' className='p-4 h-[3.8rem] border-opacity-40 w-[100%] lg:w-[70%] mt-[4%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
+                        placeholder='Enter mail address' className='text-white p-4 h-[3.8rem] border-opacity-40 w-[100%] lg:w-[70%] mt-[4%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
 
                     <input
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder='Enter your message here'
-                        className='pt-[0px] p-4 h-[8.8rem] border-opacity-40 w-[100%] lg:w-[70%] mt-[4%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
+                        className='text-white pt-[0px] p-4 h-[8.8rem] border-opacity-40 w-[100%] lg:w-[70%] mt-[4%] rounded-xl border-1 border-gray-400 bg-[#0B133B]' />
                     <div className='text-red-500 w-[70%] mt-[2rem] font-bold'>
                         {formResponse?.error ? "*" + formResponse?.error : ""}
                     </div>

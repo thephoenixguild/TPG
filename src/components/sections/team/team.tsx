@@ -11,7 +11,7 @@ interface TeamProps {
 const Team: FC<TeamProps> = () => {
 
     const [isLoading, setIsLoading] = useState(false);
-    const [showModal, setShowModal] = useState({
+    const [showModal, setShowModal] = useState<any>({
         show: false,
         position: "", description: "",
         memberName: "", name: "",
@@ -94,10 +94,15 @@ const Team: FC<TeamProps> = () => {
 
                     <Row className='flex justify-center'>
 
-                        <Col xl={4} lg={4} md={4} className='my-[2rem]'>
+                        <Col xl={4} lg={4} md={12} className='my-[2rem] flex justify-center'>
                             <div className='h-[25rem] w-[25rem] relative'>
                                 <Image layout='fill'
-                                    onClick={() => setShowModal({ ...showModal, memberName: "Srilakshmi T.C", name: 'srilakshmi', show: true, linkedin: "https://www.linkedin.com/in/srilakshmi-tc", twitter: "https://twitter.com/srilakshmitc" })} src='/srilakshmi.svg'
+                                    onClick={() => setShowModal({
+                                        ...showModal, memberName: "Srilakshmi T.C",
+                                        name: 'srilakshmi', show: true,
+                                        linkedin: "https://www.linkedin.com/in/srilakshmi-tc",
+                                        twitter: "https://twitter.com/srilakshmitc"
+                                    })} src='/srilakshmi.svg'
                                     className='cursor-pointer absolute z-20 ' alt='venue' />
                             </div>
                             <div>
@@ -108,10 +113,17 @@ const Team: FC<TeamProps> = () => {
                         </Col>
 
 
-                        <Col xl={4} lg={4} md={4} className='my-[2rem]  xl:mt-0'>
+                        <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
                             <div className='h-[25rem] w-[25rem] relative'>
                                 <Image layout='fill'
-                                    onClick={() => setShowModal({ ...showModal, memberName: "Nivedita Vivek", name: 'nivedita', show: true, linkedin: "https://www.linkedin.com/in/niveditavivek/", twitter: "https://twitter.com/VivekNivedita" })} src='/nivedita.svg'
+                                    onClick={() => setShowModal({
+                                        ...showModal,
+                                        description: <div>"Handles Logistics and Ops. <br />2+ years experience in Sales and Project Manager at Luxottica,
+                                            London; Liberty, London; Harrods, London and Panchajanya Fashions, Bangalore.Previously co- founded Naksh - NFT Marketplace.Works on the operations, Strategic planning, Research and content."</div>,
+                                        memberName: "Nivedita Vivek", name: 'nivedita',
+                                        show: true, linkedin: "https://www.linkedin.com/in/niveditavivek/",
+                                        twitter: "https://twitter.com/VivekNivedita"
+                                    })} src='/nivedita.svg'
                                     className='cursor-pointer absolute z-20' alt='venue' />
                             </div>
                             <div>
@@ -120,9 +132,15 @@ const Team: FC<TeamProps> = () => {
                             </div>
                         </Col>
 
-                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                        <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
                             <div className='h-[25rem] w-[25rem] relative'>
-                                <Image layout='fill' onClick={() => setShowModal({ ...showModal, memberName: "Bhavya Batra", name: 'bhavya', show: true, linkedin: "https://www.linkedin.com/in/bhavyabatra-/", twitter: "https://twitter.com/thebhavyabatra" })} src='/bhavya.svg' className='cursor-pointer absolute z-20' alt='venue' />
+                                <Image layout='fill' onClick={() => setShowModal({
+                                    ...showModal,
+                                    memberName: "Bhavya Batra", name: 'bhavya', show: true,
+                                    linkedin: "https://www.linkedin.com/in/bhavyabatra-/",
+                                    twitter: "https://twitter.com/thebhavyabatra",
+                                    description: <div>Handles partnerships and marketing.<br /> 2+ years experience in Sales and Product development at Ted Baker, London; Club Monaco, London and EPIC Garments, Bangladesh. Previously co-founded Naksh - NFT Marketplace. Works on Branding, business development , strategic partnerships and Design.</div>
+                                })} src='/bhavya.svg' className='cursor-pointer absolute z-20' alt='venue' />
                             </div>
                             <div>
                                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>CHIEF STRATEGY OFFICER</h6>
@@ -130,14 +148,14 @@ const Team: FC<TeamProps> = () => {
                             </div>
                         </Col>
 
-                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                        <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
                             <div className='h-[25rem] w-[25rem] relative'>
                                 <Image layout='fill'
                                     onClick={() => setShowModal({
                                         ...showModal, memberName: "Gnana Lakshmi",
                                         name: 'gnana', show: true, linkedin: "https://www.linkedin.com/in/gyan-lakshmi/",
                                         twitter: "https://twitter.com/gyanlakshmi",
-                                        description: "Handles Tech Content Curation and Quality. 10+ years experience in Software Development, education and building developer communities; Worked with Oracle, VMWare, Wiley Publications, Coinfantasy, Metacrafters and currently as a DevRel with StarkWare."
+                                        description: <div> Handles Tech Content Curation and Quality.<br /> 10+ years experience in Software Development, education and building developer communities; Worked with Oracle, VMWare, Wiley Publications, Coinfantasy, Metacrafters and currently as a DevRel with StarkWare. </div>,
                                     })} src='/gnana.svg' className='cursor-pointer absolute z-20' alt='venue' />
                             </div>
                             <div>
@@ -146,14 +164,14 @@ const Team: FC<TeamProps> = () => {
                             </div>
                         </Col>
 
-                        <Col xl={4} lg={4} md={4} className='my-[2rem]xl:mt-0'>
+                        <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
                             <div className='h-[25rem] w-[25rem] relative'>
                                 <Image layout='fill' onClick={() =>
                                     setShowModal({
                                         ...showModal, memberName: "Neda Ashraf", name: 'neda', show: true,
                                         linkedin: "https://www.linkedin.com/in/neda-ashraf/",
                                         twitter: "https://twitter.com/neda_ashraf",
-                                        description: "Handles Operations and Logistics. 1+ years of experience in web3 operations and community management. She is the Operations Head at The Phoenix Guild Community and proudly serve as the Lead Organizer for Polygon Guild Kochi. With a passion for all things web3, She is dedicated to fostering growth and innovation within the blockchain ecosystem."
+                                        description: <div>Handles Operations and Logistics. <br />1+ years of experience in web3 operations and community management. She is the Operations Head at The Phoenix Guild Community and proudly serve as the Lead Organizer for Polygon Guild Kochi. With a passion for all things web3, She is dedicated to fostering growth and innovation within the blockchain ecosystem.</div>,
                                     })} src='/neda.svg' className='cursor-pointer absolute z-20' alt='venue' />
                             </div>
                             <div>

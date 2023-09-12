@@ -105,6 +105,17 @@
     margin-top: 2rem;
     width: 40px;
   }
+  .cardSubAnim {
+    left: -2%;
+    transform: translateY(16rem);
+    width: 28rem;
+  }
+
+  .cardSub {
+    left: -2%;
+    transform: translateY(16rem);
+    width: 28rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -112,6 +123,17 @@
     margin: auto;
     margin-top: 2rem;
     width: 90% !important;
+  }
+  .cardSubAnim {
+    left: -7%;
+    transform: translateY(12rem);
+    width: 20rem;
+  }
+
+  .cardSub {
+    left: -7%;
+    transform: translateY(12rem);
+    width: 20rem;
   }
 }
 

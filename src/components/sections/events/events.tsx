@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import EventsModal from './events-modal';
 import CarouselComponent from './carousel';
 import useWindowSize from '@/components/helpers/get-window';
+import { modal } from '@nextui-org/react';
 // import CarouselComponent from './carousels';
 // import EventsModal from './eventsModal';
 
@@ -17,6 +18,10 @@ const Events: FC<EventsProps> = ({ events, loading }) => {
     const isMobile = useWindowSize()?.width < 769;
     const [selectedEvent, setSelectedEvent] = useState(null)
 
+
+    useEffect(() => {
+        console.log(modalOn, 'modalll')
+    }, [modalOn])
 
     return (
         <div>

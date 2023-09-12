@@ -110,7 +110,9 @@ const Title = () => {
                              left-[15%] sm:left-[20%] lg:left-[35%] xl:left-[35%] xxl:left-[70%]">
                                 <CustomImage
                                     imageClassName="rounded-3xl"
-                                    className={`!absolute h-[23rem] w-[26rem] rotate-[22deg] topCard2`}
+                                    className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem] 
+                                    sm:h-[23rem] sm:w-[26rem] rotate-[22deg] topCard2`}
+
                                     url="/eth.png" />
                                 <div className={styles.cardSub}>
                                     <div className="flex items-center justify-start w-[80%] text-[1.4rem]">
@@ -124,7 +126,9 @@ const Title = () => {
 
                                 <CustomImage
                                     imageClassName="rounded-3xl"
-                                    className={`!absolute h-[23rem] w-[26rem] rotate-[12deg] topCard2`}
+                                    className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
+                                     sm:h-[23rem] sm:w-[26rem] rotate-[12deg] topCard2`}
+
                                     url="/zkDay.png" />
                                 <div className={styles.cardSub}>
                                     <div className="flex items-center justify-start w-[80%] text-[1.4rem]">
@@ -138,7 +142,9 @@ const Title = () => {
 
                                 <CustomImage
                                     imageClassName="rounded-3xl"
-                                    className={`!absolute h-[23rem] w-[26rem] left-[2%] ${showTopCard ? 'topCard' : 'topCard2'}`}
+                                    className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
+                                     sm:h-[23rem] sm:w-[26rem] ${showTopCard ? 'topCard' : 'topCard2'}`}
+
                                     url="/Buildathon.png" />
                                 <div className={showTopCard ? styles.cardSubAnim : styles.cardSub}>
                                     <div className="flex items-center justify-start w-[80%] text-[1.4rem]">

@@ -1,11 +1,8 @@
-import moment from 'moment';
-import React, { FC, useEffect, useState } from 'react'
-import { Col, Modal, Row } from 'react-bootstrap';
-import Calendar2 from '../../icons/calendarr.svg';
-import styles from './events.module.scss';
-import Location from '../../icons/location.svg';
-import Timing from '../../icons/timing.svg';
+import React, { FC, useState } from 'react'
 import useWindowSize from '@/components/helpers/get-window';
+import Image from 'next/image';
+import CustomImage from '../title/image-team';
+import moment from 'moment';
 
 type eventsModalProps = {
     setModalOn: any,
@@ -23,59 +20,97 @@ const EventsModal: FC<eventsModalProps> = ({ setModalOn, modalOn, selectedEvent,
         window.open(selectedEvent?.url, '_blank');
     };
 
+    const imageUrl = selectedEvent?.cover;
+    const name = selectedEvent?.name;
+    const description = selectedEvent?.description;
+    const eventLink = selectedEvent?.url;
+    const location = selectedEvent?.city + "," + " " + selectedEvent?.state + "," + " " + selectedEvent?.country
+
+    console.log(selectedEvent)
+
     return (
-        <Modal style={{ background: '#080E2B' }} className={'modalNext'} open={modalOn}>
-            <div>
+        <>
+            {modalOn ?
+                <div
+                    className="justify-center min-w-[30rem] backdrop-blur items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                >
+                    <div className="relative w-auto my-6 mx-auto max-w-6xl">
 
-                <Row>
-                    <Col style={{ display: 'flex' }} xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
-                        <div className={styles.imgContainer}>
-                            {isMobile && <div style={{ right: 0, position: 'absolute' }} onClick={() => setModalOn(false)}>
-                                {/* <CloseIcon /> */}
-                            </div>}
-                            <img className={styles.popimg} src={selectedEvent?.cover} />
-                        </div>
-                    </Col>
-                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12} style={{ overflow: 'scroll', margin: '1rem 0rem', }}>
+                        <div className="border-0 bg-[#010c25] rounded-lg shadow-lg relative flex w-full outline-none focus:outline-none">
 
-                        <div className={styles.eventDetail} >
-                            {!isMobile && <div style={{ textAlign: 'right' }} onClick={() => setModalOn(false)}>
-                                {/* <CloseIcon /> */}
-                            </div>}
-                            <div className={styles.popHeading} style={{ color: '#fff' }}>{selectedEvent?.name}</div>
-                            <div className={styles.infos}>
-                                <div>
-                                    <img src={Calendar2} alt='Calendar2' />
-                                    <span className={styles.infoText}>
-                                        {moment(selectedEvent?.start).format("DD MMMM YYYY")}
+                            <div className="relative flex-auto bg-[#010725] rounded-xl flex">
+                                <CustomImage
+                                    className="h-[60vh] w-[30rem] object-contain"
+                                    alt="event"
+                                    url={imageUrl}
+                                    imageClassName=""
+                                />
+                            </div>
+                            <div className='p-[2%] pl-[5%] flex flex-col justify-between py-[5%]'>
+                                <div className='w-full flex justify-end relative bottom-10'
+                                    onClick={() => setModalOn(false)} >
+                                    <CustomImage
+                                        className="h-[1.8rem] w-[1.8rem] object-contain"
+                                        alt="event"
+                                        url={'/close.svg'}
+                                        imageClassName="" />
+                                </div>
+                                <h2 className="text-left font-extrabold">{name}</h2>
+                                <h5 className="text-[#AAB0FE] text-[18px] text-left w-[90%]">
+                                    {description.slice(0, 230)}
+                                    {!viewMore && <span onClick={() => setViewMore(true)} style={{ textDecoration: 'underline', fontWeight: 700, marginLeft: 10 }}>view more </span>}
+                                    {viewMore && description}
+                                    {viewMore && <span onClick={() => setViewMore(false)}
+                                        style={{ textDecoration: 'underline', fontWeight: 700, marginLeft: 10 }}>view less </span>}
+
+                                </h5>
+                                <div className='flex items-center'>
+                                    <CustomImage
+                                        className="h-[1.3rem] w-[1.3rem] object-contain"
+                                        alt="event"
+                                        url={'/calendarr.svg'}
+                                        imageClassName="" />
+                                    <span className='self-center ml-2 font-semibold'>
+                                        {moment(selectedEvent?.start).format("DD MMM YYYY")}
                                     </span>
                                 </div>
-                                <div>
-                                    <img src={Location} alt='Location' /><span className={styles.infoText}>{selectedEvent?.city}, {selectedEvent?.country}</span>
+                                {selectedEvent?.city ? <div className='flex items-center'>
+                                    <CustomImage
+                                        className="h-[1.3rem] w-[1.3rem] object-contain"
+                                        alt="event"
+                                        url={'/locationw.svg'}
+                                        imageClassName="" />
+                                    <span className='self-center ml-2 font-semibold'>
+                                        {location}
+                                    </span>
+                                </div> : <></>}
+                                <div className='flex items-center'>
+                                    <CustomImage
+                                        className="h-[1.3rem] w-[1.3rem] object-contain"
+                                        alt="event"
+                                        url={'/clock.svg'}
+                                        imageClassName="" />
+                                    <span className='self-center ml-2 font-semibold'>
+                                        {moment(selectedEvent?.start).format("LT")}
+                                    </span>
+                                </div>                                <div>
+                                    {/* <img src={Location} alt='Location' /><span className={styles.infoText}>{selectedEvent?.city}, {selectedEvent?.country}</span> */}
                                 </div>
                                 <div>
-                                    <img src={Timing} alt='Timing' /><span className={styles.infoText}>{moment(selectedEvent?.start).format('LT')}</span>
+                                    {/* <img src={Timing} alt='Timing' /><span className={styles.infoText}>{moment(selectedEvent?.start).format('LT')}</span> */}
+                                </div>
+                                <div onClick={() => window.open(eventLink)} className="w-[14rem] navBtn" style={{ height: '60px', width: '180px', fontWeight: '800' }}>
+                                    Book event
                                 </div>
                             </div>
-                            <div className={styles.brief}>
-                                {selectedEvent?.description.slice(0, 230)}
-                                {!viewMore && <span onClick={() => setViewMore(true)} style={{ textDecoration: 'underline', fontWeight: 700, marginLeft: 10 }}>view more </span>}
-                                {viewMore && selectedEvent?.description}
-                                {viewMore && <span onClick={() => setViewMore(false)}
-                                    style={{ textDecoration: 'underline', fontWeight: 700, marginLeft: 10 }}>view less </span>}
-                            </div>
-                            {noCTA ? <></> : <div onClick={eventSite} className='navBtn'
-                                style={{
-                                    color: '#fff',
-                                    margin: isMobile ? '2rem auto' : '2rem 0rem'
-                                }}>
-                                BOOK EVENT
-                            </div>}
+
                         </div>
-                    </Col>
-                </Row>
-            </div>
-        </Modal >
+                    </div>
+                </div>
+                :
+                <></>}
+        </>
+
     )
 }
 
