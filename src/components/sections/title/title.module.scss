@@ -154,3 +154,18 @@
   backdrop-filter: blur(2px);
   justify-content: space-between;
 }
+@media screen and (min-width: 380px) and (max-width: 450px) {
+  .hero {
+    margin: 0rem !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hero {
+    margin: -1.5rem !important;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 376px) {
+  .hero {
+    margin: -1rem !important;
+  }
+}
