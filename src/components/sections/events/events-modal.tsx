@@ -55,7 +55,7 @@ const EventsModal: FC<eventsModalProps> = ({
               </div>
               <div className='p-[2%] flex flex-col justify-between py-[5%]'>
                 <div
-                  className='w-full flex justify-end relative bottom-10 sm:hidden md:flex'
+                  className='w-full flex justify-end relative bottom-10'
                   onClick={() => setModalOn(false)}
                 >
                   <CustomImage
