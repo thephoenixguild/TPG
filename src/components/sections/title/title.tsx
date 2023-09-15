@@ -162,14 +162,14 @@ const Title = () => {
                     onClick={() => window.open("https://t.me/thephoenixguild")}
                     className='navBtn ml-6 relative z-[1]'
                   >
-                    Get free resource!
+                    Sign up for newsletter
                   </motion.div>
                 </div>
               </div>
             </Col>
             <Col
-              lg={6}
-              xl={6}
+              lg={5}
+              xl={5}
               xxl={6}
               md={10}
               className={cx(
@@ -238,9 +238,8 @@ const Title = () => {
                 <CustomImage
                   imageClassName='rounded-3xl'
                   className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
-                                 sm:h-[23rem] sm:w-[26rem] ${
-                                   showTopCard ? "topCard" : "topCard2"
-                                 }`}
+                                 sm:h-[23rem] sm:w-[26rem] ${showTopCard ? "topCard" : "topCard2"
+                    }`}
                   url='/Buildathon.png'
                 />
                 <div

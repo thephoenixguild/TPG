@@ -12,6 +12,7 @@ const Footer: FC<FooterProps> = ({ }) => {
             Fostering education and diversity in web3
         </div>
         <div
+            onClick={() => window.open("https://t.me/thephoenixguild")}
             className="sendMessage w-[60%] text-white md:w-[30%] lg:w-[20%] font-bold">
             Join Community
         </div>

@@ -33,13 +33,13 @@ const NavBar = () => {
           className='flex items-center relative lg:bottom-0 bottom-3 mx-auto'
           onClick={() => router.push("/")}
         >
-          <Navbar.Brand className='relative right-2'>
+          <Navbar.Brand className='relative'>
             {icons.phoenixLogo}{" "}
           </Navbar.Brand>
         </div>
         <Navbar.Collapse id='navbarScroll'>
           <Nav className='me-auto my-2 my-lg-0 navvRes' navbarScroll>
-            <NavDropdown title='About TPG' id='basic-nav-dropdown'>
+            <NavDropdown title='About TPG' className="mx-[1rem]" id='basic-nav-dropdown'>
               <NavDropdown.Item href='#action/3.2'>
                 Achievements
               </NavDropdown.Item>
@@ -52,12 +52,7 @@ const NavBar = () => {
 
               <NavDropdown.Item href='#action/3.4'>Roadmap</NavDropdown.Item>
             </NavDropdown>
-
-            {/* <Nav.Link onClick={() => router.push("/chapters")}>
-                            <div className="flex self-center items-center justify-center">TPG Chapters <span className="ml-2">{icons.downChevron}</span></div>
-                        </Nav.Link> */}
-
-            <NavDropdown title='TPG Chapters' id='basic-nav-dropdown'>
+            <NavDropdown title='TPG Chapters' className="mr-[1rem]" id='basic-nav-dropdown'>
               <Link
                 style={{ textDecoration: "none" }}
                 href={"/chapters/ahmedabad"}
@@ -139,6 +134,7 @@ const NavBar = () => {
           </Nav>
           <div className={styles.iconsSocial}>
             <div
+              className="ml-8 xl:ml-0"
               style={{ alignSelf: "center" }}
               onMouseEnter={() => setStyle({ ...style, icon1: true })}
               onMouseLeave={() => setStyle({ ...style, icon1: false })}
@@ -151,6 +147,7 @@ const NavBar = () => {
               <LinkedIcon hovered={style.icon1} />
             </div>
             <div
+              className="ml-8 xl:ml-0"
               style={{ alignSelf: "center" }}
               onMouseEnter={() => setStyle({ ...style, icon2: true })}
               onMouseLeave={() => setStyle({ ...style, icon2: false })}
@@ -159,6 +156,7 @@ const NavBar = () => {
               <TwitterIcon hovered={style.icon2} />
             </div>
             <div
+              className="ml-8 xl:ml-0"
               style={{ alignSelf: "center", marginRight: "10%" }}
               onMouseEnter={() => setStyle({ ...style, icon3: true })}
               onMouseLeave={() => setStyle({ ...style, icon3: false })}

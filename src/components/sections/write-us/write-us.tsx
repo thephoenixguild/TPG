@@ -17,8 +17,7 @@ const WriteUs: FC<WriteUsProps> = () => {
     const location = useRouter().query.slug;
 
     async function sendFeedback() {
-        const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/sendTPGFeedback${location ? `?location=${location}` : ""}`;
-
+        const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/sendTPGFeedback${location ? `?location=${location}` : `?location=main`}`;
 
         try {
 
@@ -71,7 +70,7 @@ const WriteUs: FC<WriteUsProps> = () => {
                     </p>
 
                     <div className='flex lg:justify-start justify-center mb-[2rem]'>
-                        <div className='flex mt-[2rem] w-[45%] md:w-[38%] lg:w-[25%] justify-between'>
+                        <div className='flex mt-[2rem] w-[45%] md:w-[38%] lg:w-[7rem] justify-between'>
                             <div className='cursor-pointer'>
                                 {icons.insta}
                             </div>

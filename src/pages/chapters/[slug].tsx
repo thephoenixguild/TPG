@@ -1,7 +1,7 @@
 'use client'
 
 import { getChapterData } from '@/components/helpers/chapters'
-import { LinkedIcon, icons } from '@/components/icons/icons'
+import { icons } from '@/components/icons/icons'
 import Layout from '@/components/layout/layout'
 import NavBar from '@/components/navbar/navbar'
 import Footer from '@/components/sections/footer/footer'
@@ -41,7 +41,8 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                 <Image alt="banner" className='mt-[8rem] lg:mt-[4rem]' src='/chapterImage.svg'
                     height={289} width={1800} />
                 <div className='absolute bottom-[-58%] sm:bottom-[-28%] left-[40%] md:left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px]'>
-                    <Image alt='tpg' src='/avatar.png' layout='fill' />
+                    {/* @ts-ignore */}
+                    <Image alt='tpg' src={data?.logo} layout='fill' />
                 </div>
 
             </div>
@@ -66,7 +67,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
 
                 <Row className="mt-4 justify-content-center">
                     {data?.members?.length && data?.members.map(member =>
-                        <Col md={6} lg={4} sm={12} className="mb-4 cursor-pointer h-[100%]">
+                        <Col md={12} lg={4} sm={12} className="mb-4 cursor-pointer h-[100%]">
                             <div className="cursor-pointer hover:bg-[#0e1a4e] rounded-[1rem] p-4
                          font-extrabold text-white bg-[#091136]  flex">
                                 <div className='flex items-center p-[8px] mr-3 rounded-lg '>

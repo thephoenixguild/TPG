@@ -2,12 +2,14 @@ export const getChapterData = (location: any) => {
     switch (location) {
         case "ahmedabad":
             return {
-                name: "Ahmedabad"
+                name: "Ahmedabad",
+                logo: "/ahmedabad/logo.svg"
             }
             break;
         case "bhopal":
             return {
                 name: "Bhopal",
+                logo: "/bhopal/logo.svg",
                 members: [
                     {
                         name: "Shouryam Kumar",
@@ -25,6 +27,7 @@ export const getChapterData = (location: any) => {
         case "chennai":
             return {
                 name: "Chennai",
+                logo: "/chennai/logo.svg",
                 members: [
                     {
                         name: "Ovia Seshadri",
@@ -52,6 +55,7 @@ export const getChapterData = (location: any) => {
         case "delhi":
             return {
                 name: "Delhi",
+                logo: "/delhi/logo.svg",
                 members: [
                     {
                         name: "Gagandeep kaur",
@@ -79,6 +83,7 @@ export const getChapterData = (location: any) => {
         case "hyderabad":
             return {
                 name: "Hyderabad",
+                logo: "/hyderabad/logo.svg",
                 members: [
                     {
                         name: "Venkatesh Kanchanpally",
@@ -91,6 +96,7 @@ export const getChapterData = (location: any) => {
         case "jaipur":
             return {
                 name: "Jaipur",
+                logo: "/jaipur/logo.svg",
                 members: [
                     {
                         name: "Avani Agarwal",
@@ -103,6 +109,7 @@ export const getChapterData = (location: any) => {
         case "karnataka":
             return {
                 name: "Karnataka",
+                logo: "/karnataka/logo.svg",
                 members: [
                     {
                         name: "Adi Bhagavath",
@@ -121,6 +128,7 @@ export const getChapterData = (location: any) => {
         case "kerala":
             return {
                 name: "Kerala",
+                logo: "/kerala/logo.svg",
                 members: [
                     {
                         name: "Aswin Lal S",
@@ -165,6 +173,7 @@ export const getChapterData = (location: any) => {
         case "kolkata":
             return {
                 name: "Kolkata",
+                logo: "/kolkata/logo.svg",
                 members: [
                     {
                         name: "Sumita Pathak",
@@ -184,6 +193,7 @@ export const getChapterData = (location: any) => {
         case "pune":
             return {
                 name: "Pune",
+                logo: "/pune/logo.svg",
                 members: [
                     {
                         name: "Shabbir Khan",
@@ -213,6 +223,7 @@ export const getChapterData = (location: any) => {
         case "kualalumpur":
             return {
                 name: "Kuala Lumpur",
+                logo: "/kuala/logo.svg",
                 members: [
                     {
                         name: "Yudhishthra Sugumaran",

@@ -14,16 +14,25 @@ const ResourcesTitle: FC<ResourcesTitleProps> = ({ notionResources }) => {
         setSelectedLevel(level);
     };
 
-    const filteredResources = selectedLevel
+    const filteredResources = selectedLevel != "All"
         ? notionResources.filter((resource: any) =>
             resource.resourceLevel.includes(selectedLevel)
         )
-        : notionResources;
+        : selectedLevel == "All" && notionResources;
 
     return (
         <div className="my-[2rem] mt-[8rem] lg:mt-[4rem]">
             {/* ... (other JSX code) */}
             <Row className="mt-[2rem] flex mx-auto justify-center flex-wrap">
+                <Col xs={6} sm={3} xl={2} lg={2}>
+                    <div
+                        onClick={() => filterResourcesByLevel("All")}
+                        className={`cursor-pointer ${selectedLevel === "All" ? "bg-[#0e1a4e]" : ""
+                            } rounded-[2rem] mb-[2rem] p-2 font-extrabold mx-[0.6rem] border-[2px] border-solid text-white bg-[#091136] border-[#2E3B7D]`}
+                    >
+                        All
+                    </div>
+                </Col>
                 <Col xs={6} sm={3} xl={2} lg={2}>
                     <div
                         onClick={() => filterResourcesByLevel("Beginner")}

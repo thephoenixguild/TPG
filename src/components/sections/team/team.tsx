@@ -5,7 +5,7 @@ import { FC, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import TeamModal from "./team-modal";
 import { icons } from "@/components/icons/icons";
-interface TeamProps {}
+interface TeamProps { }
 
 const Team: FC<TeamProps> = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -88,6 +88,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
               <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
                 <Image
+                  blurDataURL="/srilakshmi.svg"
                   layout='fill'
                   onClick={() =>
                     setShowModal({
@@ -115,6 +116,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
               <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
                 <Image
+                  blurDataURL="/nivedita.svg"
                   layout='fill'
                   onClick={() =>
                     setShowModal({
@@ -152,6 +154,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
                 <Image
+                  blurDataURL="/bhavya.svg"
                   layout='fill'
                   onClick={() =>
                     setShowModal({
@@ -189,6 +192,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
                 <Image
+                  blurDataURL="/gnana.svg"
                   layout='fill'
                   onClick={() =>
                     setShowModal({
@@ -226,6 +230,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
                 <Image
+                  blurDataURL="/neda.svg"
                   layout='fill'
                   onClick={() =>
                     setShowModal({
