@@ -13,6 +13,8 @@ const cx = classNames.bind(styles);
 const Title = () => {
   const [showTopCard, setShowTopCard] = useState(false);
   const [value, setValue] = useState(1);
+  const [email, setEmail] = useState({ email: "" });
+  const [signupResponse, setSignupResponse] = useState<any>()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -39,6 +41,34 @@ const Title = () => {
       clearInterval(intervalId);
     };
   }, []);
+
+  async function sendFeedback() {
+    const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/subscribeToTPGNewsletter`;
+
+    try {
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email }),
+      });
+
+      const res = await response.json();
+
+      if (response.ok && response.status == 200) {
+        setSignupResponse({ message: res?.message });
+      } else if (response.status !== 200) {
+        setSignupResponse({ error: res?.error })
+      } else {
+        console.error("Failed to send feedback");
+      }
+
+    } catch (error) {
+      console.error("Network error:", error);
+    }
+  }
 
   return (
     <Row>
@@ -139,10 +169,12 @@ const Title = () => {
                   >
                     {icons.msgIcon}
                     <input
+                      onChange={(e: any) => setEmail(e.target.value)}
                       className='w-[100%] border-0 h-[58px] cursor-pointer outline-0 text-[#AAB0FE] bg-transparent'
                       placeholder='Enter your email address'
                     />
                   </motion.div>
+
                   <motion.div
                     initial={{
                       opacity: 0,
@@ -159,11 +191,18 @@ const Title = () => {
                       ease: "easeInOut",
                       delay: 0.3,
                     }}
-                    onClick={() => window.open("https://t.me/thephoenixguild")}
+                    onClick={sendFeedback}
                     className='navBtn ml-6 relative z-[1]'
                   >
                     Sign up for newsletter
                   </motion.div>
+                </div>
+                <div className="xl:mt-[1rem] flex justify-center lg:justify-start mx-9 text-red-500 mb-[4rem] xl:mb-[0rem]">
+
+                  {signupResponse?.error}
+                </div>
+                <div className="xl:mt-[1rem] flex justify-center lg:justify-start mx-9 text-blue-400 mb-[4rem] xl:mb-[0rem]">
+                  {signupResponse?.message}
                 </div>
               </div>
             </Col>

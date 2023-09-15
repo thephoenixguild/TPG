@@ -29,20 +29,23 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
             <NavBar />
             <div className='relative'>
 
-                <div
+                {/* <div
                     className="absolute right-4 top-[8%] cursor-pointer hover:bg-[#0e1a4e] rounded-[2rem]
                      mb-[2rem] p-2 px-3 text-[10px] sm:text-[14px] 
                       font-extrabold border-[2px] border-solid
                       text-white bg-[#091136] border-[#2E3B7D]"
                 >
                     TPG - {data?.name}
-                </div>
-
-                <Image alt="banner" className='mt-[8rem] lg:mt-[4rem]' src='/chapterImage.svg'
-                    height={289} width={1800} />
-                <div className='absolute bottom-[-58%] sm:bottom-[-28%] left-[40%] md:left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px]'>
+                </div> */}
+                <Image alt="banner" className='mt-[8rem] lg:mt-[4rem] rounded-3xl' src='/cover-chapter.svg'
+                    height={169} width={1800} />
+                <div className='absolute bottom-[-58%] sm:bottom-[-2%] left-[40%] md:left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px]'>
                     {/* @ts-ignore */}
                     <Image alt='tpg' src={data?.logo} layout='fill' />
+                </div>
+                <div className='font-raleway font-bold text-[#A8A1CB] relative mt-[3rem] text-[2rem] 
+                text-right  w-[75%] m-auto top-[-12rem] tracking-widest'>
+                    {data?.name.toUpperCase()}
                 </div>
 
             </div>

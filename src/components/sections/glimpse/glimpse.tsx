@@ -3,16 +3,17 @@ import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
 import Events from '../events/events';
 import Layout from '@/components/layout/layout';
+import EventsModal from '../events/events-modal';
 
 interface GlimpseProps {
 }
 
 const Glimpse: FC<GlimpseProps> = () => {
 
+    const [modalOn, setModalOn] = useState(false);
     const [events, setEvents] = useState({ upcoming: [], past: [] });
     const [loading, setLoading] = useState(false);
-
-
+    const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
     useEffect(() => {
         let eventArr = [];
@@ -30,6 +31,13 @@ const Glimpse: FC<GlimpseProps> = () => {
             .catch((err) => console.log(err));
     }, []);
 
+
+    function eventHandler(urlId: string) {
+        const selectedEve = events?.past?.flat().find(({ url }: any) => url == urlId)
+        setSelectedEvent(selectedEve);
+        setModalOn(true)
+    }
+
     return <>
         <Layout>
             <Events events={events} loading={loading} />
@@ -42,7 +50,10 @@ const Glimpse: FC<GlimpseProps> = () => {
             </div>
             <div className='flex my-[2rem] overflow-scroll'>
                 {events?.past.flat().map((event: any) =>
-                    <Image key={event?.url} className='p-2 border-2 border-gray-800 rounded-lg mx-2 object-cover'
+                    <Image
+                        onClick={() => eventHandler(event?.url)}
+
+                        key={event?.url} className='p-2 border-2 border-gray-800 rounded-lg mx-2 object-cover'
                         height={190} width={160}
                         src={event?.cover} alt='venue' />)}
             </div>
@@ -50,6 +61,11 @@ const Glimpse: FC<GlimpseProps> = () => {
                 We firmly believe that impact can be created not just through awareness around education but by building the complete pipeline around it. Our programs are focused on practical hands-on knowledge and connecting women within our community with opportunities to actually work on production-ready Dapps
             </div>
         </div>
+        <EventsModal
+            modalOn={modalOn}
+            setModalOn={setModalOn}
+            selectedEvent={selectedEvent}
+        />
     </>
 }
 

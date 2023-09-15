@@ -41,11 +41,13 @@ const Team: FC<TeamProps> = () => {
                 Grants received
               </h1>
             </div>
-            <div className='p-4 py-2 rounded-3xl text-center bg-[#A500C8] mr-[2%] w-full'>
-              <h1 className='text-left font-bold text-[62px]'>50k+</h1>
-              <h1 className='text-left font-bold text-[24px]'>
-                Bounties disbursed
-              </h1>
+            <div className='p-4 py-2 flex items-center rounded-3xl text-center bg-[#A500C8] mr-[2%] w-full'>
+              <div>
+                <h1 className='text-left font-bold text-[62px]'>50k+</h1>
+                <h1 className='text-left font-bold text-[24px]'>
+                  Bounties disbursed
+                </h1>
+              </div>
             </div>
             <div className='p-4 w-full rounded-3xl bg-[#4B21FF] text-center'>
               <h1 className='text-left font-bold text-[62px]'>2.5k+</h1>

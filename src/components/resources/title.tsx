@@ -8,7 +8,7 @@ interface ResourcesTitleProps {
 }
 
 const ResourcesTitle: FC<ResourcesTitleProps> = ({ notionResources }) => {
-    const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
+    const [selectedLevel, setSelectedLevel] = useState<string | null>("All");
 
     const filterResourcesByLevel = (level: string | null) => {
         setSelectedLevel(level);

@@ -38,7 +38,7 @@ const Events: FC<EventsProps> = ({ events, loading }) => {
           <CarouselComponent
             setSelectedEvent={setSelectedEvent}
             setModalOn={setModalOn}
-            events={events?.past}
+            events={events?.upcoming}
           />
         )}
       </div>
