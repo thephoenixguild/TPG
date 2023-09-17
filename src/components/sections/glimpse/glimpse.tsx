@@ -48,7 +48,7 @@ const Glimpse: FC<GlimpseProps> = () => {
                 Glimpse of our past events<br />
                 and workshops
             </div>
-            <div className='flex my-[2rem] overflow-scroll'>
+            <div className='flex my-[2rem] overflow-scroll pastEvent'>
                 {events?.past.flat().map((event: any) =>
                     <Image
                         onClick={() => eventHandler(event?.url)}

@@ -1,7 +1,7 @@
 'use client'
 
 import { getChapterData } from '@/components/helpers/chapters'
-import { icons } from '@/components/icons/icons'
+import { LinkedIcon, TwitterIcon, icons } from '@/components/icons/icons'
 import Layout from '@/components/layout/layout'
 import NavBar from '@/components/navbar/navbar'
 import Footer from '@/components/sections/footer/footer'
@@ -21,6 +21,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
 
     const router = useRouter();
     const location = router.query.slug;
+    //@ts-ignore
     const data = getChapterData(router.query.slug);
 
 
@@ -91,16 +92,27 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                     <h6 className="text-[#EF2A82] py-[0.4rem]">
                                         {member?.position}
                                     </h6>
-                                    <div className='flex justify-between w-[60%]'>
-                                        <div className='cursor-pointer mr-4 sm:mr-2'>
-                                            {icons.insta}
-                                        </div>
-                                        <div className='cursor-pointer mr-4 sm:mr-2'>
-                                            {icons.whatsapp}
-                                        </div>
-                                        <div className='cursor-pointer mr-4 sm:mr-2'>
-                                            {icons.linked}
-                                        </div>
+                                    <div className='flex'>
+                                        {/* @ts-ignore */}
+                                        {member?.socialMedia?.instagram &&
+                                            <div
+                                                /* @ts-ignore */
+                                                onClick={() => window.open(member?.socialMedia?.instagram)}
+                                                className='cursor-pointer mr-8 sm:mr-2'>
+                                                {icons.insta}
+                                            </div>}
+                                        {member?.socialMedia?.twitter &&
+                                            <div
+                                                onClick={() => window.open(member?.socialMedia?.twitter)}
+                                                className='cursor-pointer mr-8 sm:mr-2'>
+                                                <TwitterIcon chapter={true} />
+                                            </div>}
+                                        {member?.socialMedia?.linkedin &&
+                                            <div
+                                                onClick={() => window.open(member?.socialMedia?.linkedin)}
+                                                className='cursor-pointer mr-8 sm:mr-2'>
+                                                <LinkedIcon chapter={true} />
+                                            </div>}
                                     </div>
                                 </div>
                             </div>

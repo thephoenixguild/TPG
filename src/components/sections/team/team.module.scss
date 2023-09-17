@@ -2,6 +2,8 @@
   top: 0;
   right: 0;
   bottom: 0;
+  width: 30rem;
+  height: 30rem;
 }
 
 .iconsSocial {
@@ -14,8 +16,41 @@
 @media only screen and (max-width: 992px) {
   .iconsSocial {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     margin: auto;
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .modalImg {
+    justify-items: center;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    margin-top: 4rem;
+  }
+  .description {
+    text-align: center !important;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .modalImg {
+    justify-items: center;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    margin-top: 4rem;
+  }
+  .description {
+    text-align: center !important;
+  }
+}
+
+.description {
+  color: #aab0fe;
+  font-size: 18px;
+  display: flex;
+  text-align: left;
 }

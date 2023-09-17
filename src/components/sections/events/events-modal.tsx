@@ -66,7 +66,7 @@ const EventsModal: FC<eventsModalProps> = ({
                   />
                 </div>
                 <h2 className='text-left font-extrabold'>{name}</h2>
-                <h5 className='text-[#AAB0FE] md:text-[18px] sm:text-[16px] text-left w-[90%]'>
+                <h5 className='text-[#AAB0FE] md:text-[18px] sm:text-[16px] text-left max-w-[90%] sm:w-[90%]'>
                   {description.slice(0, 230)}
                   {!viewMore && (
                     <span

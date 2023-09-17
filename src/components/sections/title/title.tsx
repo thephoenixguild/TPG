@@ -12,9 +12,38 @@ const cx = classNames.bind(styles);
 
 const Title = () => {
   const [showTopCard, setShowTopCard] = useState(false);
-  const [value, setValue] = useState(1);
   const [email, setEmail] = useState({ email: "" });
   const [signupResponse, setSignupResponse] = useState<any>()
+  const [count, setCount] = useState([
+    {
+      name: "TPG at ETH India",
+      location: "Kochi , Kerala",
+      pic: "/eth.png"
+    },
+    {
+      name: "ZK Day",
+      location: "Istanbul, Turkey",
+      pic: "/zkDay.png"
+    },
+    {
+      name: "Build-a-thon",
+      location: "Kochi , Kerala",
+      pic: "/Buildathon.png"
+    }
+  ]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prevCount => {
+        const newCount = [...prevCount];
+        const firstItem: any = newCount.shift();
+        newCount.push(firstItem);
+        return newCount;
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -24,23 +53,6 @@ const Title = () => {
     return () => clearTimeout(timer);
   }, [showTopCard]);
 
-  useEffect(() => {
-    console.log(value);
-
-    const intervalId = setInterval(() => {
-      if (value === 3) {
-        setValue(2);
-      } else if (value === 2) {
-        setValue(1);
-      } else {
-        setValue(3);
-      }
-    }, 3000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
 
   async function sendFeedback() {
     const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/subscribeToTPGNewsletter`;
@@ -69,6 +81,24 @@ const Title = () => {
       console.error("Network error:", error);
     }
   }
+
+  const titleData = [
+    {
+      name: "TPG at ETH India",
+      location: "Kochi , Kerala",
+      pic: "/eth.png"
+    },
+    {
+      name: "ZK Day ",
+      location: "Istanbul, Turkey",
+      pic: "/zkDay.png"
+    },
+    {
+      name: "Build-a-thon",
+      location: "Kochi , Kerala",
+      pic: "/Buildathon.png"
+    }
+  ]
 
   return (
     <Row>
@@ -230,7 +260,8 @@ const Title = () => {
                   imageClassName='rounded-3xl'
                   className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
                                 sm:h-[23rem] sm:w-[26rem] rotate-[22deg] topCard2`}
-                  url='/eth.png'
+                  url={count[0]?.pic ?? count[0]?.pic}
+
                 />
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
@@ -254,7 +285,7 @@ const Title = () => {
                   imageClassName='rounded-3xl'
                   className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
                                  sm:h-[23rem] sm:w-[26rem] rotate-[12deg] topCard2`}
-                  url='/zkDay.png'
+                  url={count[1]?.pic ?? count[1]?.pic}
                 />
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
@@ -279,13 +310,13 @@ const Title = () => {
                   className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
                                  sm:h-[23rem] sm:w-[26rem] ${showTopCard ? "topCard" : "topCard2"
                     }`}
-                  url='/Buildathon.png'
+                  url={count[2]?.pic}
                 />
                 <div
                   className={showTopCard ? styles.cardSubAnim : styles.cardSub}
                 >
-                  <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
-                    Build-a-thon <span className='pl-4'>{icons.linkTo}</span>
+                  <div className='flex items-center justify-start w-[100%] text-[1.4rem]'>
+                    {count[2]?.name} <span className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image
@@ -296,7 +327,7 @@ const Title = () => {
                     />
                     <span className='pl-[2%] text-gray-400'>
                       {" "}
-                      Kochi , Kerala
+                      {count[2]?.location}
                     </span>
                   </div>
                 </div>

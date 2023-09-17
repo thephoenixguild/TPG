@@ -87,8 +87,8 @@ const Team: FC<TeamProps> = () => {
         </div>
         <div>
           <Row className='flex justify-center'>
-            <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
-              <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
+            <Col xl={4} lg={4} md={12} className='my-[2rem] xl:mt-0'>
+              <div className='h-[25rem] w-full relative z-0'>
                 <Image
                   blurDataURL="/srilakshmi.svg"
                   layout='fill'
@@ -98,8 +98,10 @@ const Team: FC<TeamProps> = () => {
                       memberName: "Srilakshmi T.C",
                       name: "srilakshmi",
                       show: true,
+                      position: "CO-FOUNDER",
                       linkedin: "https://www.linkedin.com/in/srilakshmi-tc",
                       twitter: "https://twitter.com/srilakshmitc",
+                      description: 'Handles partnerships and marketing. 2+ years experience in Sales and Product development at Ted Baker, London; Club Monaco, London and EPIC Garments, Bangladesh. Previously co-founded Naksh - NFT Marketplace. Works on Branding, business development , strategic partnerships and Design.'
                     })
                   }
                   src='/srilakshmi.svg'
@@ -116,7 +118,7 @@ const Team: FC<TeamProps> = () => {
             </Col>
 
             <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
-              <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
+              <div className='h-[25rem] md:w-full relative z-0'>
                 <Image
                   blurDataURL="/nivedita.svg"
                   layout='fill'
@@ -125,17 +127,18 @@ const Team: FC<TeamProps> = () => {
                       ...showModal,
                       description: (
                         <div>
-                          "Handles Logistics and Ops. <br />
+                          Handles Logistics and Ops. <br />
                           2+ years experience in Sales and Project Manager at
                           Luxottica, London; Liberty, London; Harrods, London
                           and Panchajanya Fashions, Bangalore.Previously co-
                           founded Naksh - NFT Marketplace.Works on the
-                          operations, Strategic planning, Research and content."
+                          operations, Strategic planning, Research and content.
                         </div>
                       ),
                       memberName: "Nivedita Vivek",
                       name: "nivedita",
                       show: true,
+                      position: "CO-FOUNDER",
                       linkedin: "https://www.linkedin.com/in/niveditavivek/",
                       twitter: "https://twitter.com/VivekNivedita",
                     })
@@ -154,7 +157,7 @@ const Team: FC<TeamProps> = () => {
             </Col>
 
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
-              <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
+              <div className='h-[25rem] w-full relative z-0'>
                 <Image
                   blurDataURL="/bhavya.svg"
                   layout='fill'
@@ -164,16 +167,17 @@ const Team: FC<TeamProps> = () => {
                       memberName: "Bhavya Batra",
                       name: "bhavya",
                       show: true,
+                      position: "CHIEF STRATEGY OFFICER",
                       linkedin: "https://www.linkedin.com/in/bhavyabatra-/",
                       twitter: "https://twitter.com/thebhavyabatra",
                       description: (
                         <div>
+                          Handles Strategy for Growth and Scaling<br />
+                          3+ years of experience in designing and strategising web3 products as an Independent advisor.
+                          Currently leading the blockchain track for Women Who Code.
+                          Previously worked as a Web3 Product Manager at a Venture Studio , an Analyst at Deloitte USI, Emerging tech Strategist for various early-stage startups and Product Manager for MAH Healthcare.
                           Handles partnerships and marketing.
-                          <br /> 2+ years experience in Sales and Product
-                          development at Ted Baker, London; Club Monaco, London
-                          and EPIC Garments, Bangladesh. Previously co-founded
-                          Naksh - NFT Marketplace. Works on Branding, business
-                          development , strategic partnerships and Design.
+
                         </div>
                       ),
                     })
@@ -192,16 +196,18 @@ const Team: FC<TeamProps> = () => {
             </Col>
 
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
-              <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
+              <div className='h-[25rem] w-full relative z-0'>
                 <Image
                   blurDataURL="/gnana.svg"
                   layout='fill'
+
                   onClick={() =>
                     setShowModal({
                       ...showModal,
                       memberName: "Gnana Lakshmi",
                       name: "gnana",
                       show: true,
+                      position: "TECHNICAL ADVISOR",
                       linkedin: "https://www.linkedin.com/in/gyan-lakshmi/",
                       twitter: "https://twitter.com/gyanlakshmi",
                       description: (
@@ -230,7 +236,7 @@ const Team: FC<TeamProps> = () => {
             </Col>
 
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
-              <div className='h-[25rem] lg:w-[25rem] md:w-full relative z-0'>
+              <div className='h-[25rem] w-full relative z-0'>
                 <Image
                   blurDataURL="/neda.svg"
                   layout='fill'
@@ -240,6 +246,7 @@ const Team: FC<TeamProps> = () => {
                       memberName: "Neda Ashraf",
                       name: "neda",
                       show: true,
+                      position: "HEAD OF OPERATIONS",
                       linkedin: "https://www.linkedin.com/in/neda-ashraf/",
                       twitter: "https://twitter.com/neda_ashraf",
                       description: (
@@ -271,6 +278,7 @@ const Team: FC<TeamProps> = () => {
         </div>
       </div>
       <TeamModal
+        position={showModal?.position}
         description={showModal?.description}
         linkedin={showModal?.linkedin}
         memberName={showModal?.memberName}

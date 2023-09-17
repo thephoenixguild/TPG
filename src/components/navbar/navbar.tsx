@@ -14,6 +14,7 @@ import styles from "./navbar.module.scss";
 import { useRouter } from "next/navigation";
 import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
+import useWindowSize from "../helpers/get-window";
 
 const NavBar = () => {
   const router = useRouter();
@@ -22,6 +23,10 @@ const NavBar = () => {
     icon2: false,
     icon3: false,
   });
+
+  // @ts-ignore
+
+  const width = Number(useWindowSize());
 
   return (
     <Navbar key={1} expand='lg' className='lg:mb-0 mb-[4rem] z-[1] relative'>
@@ -34,93 +39,109 @@ const NavBar = () => {
           onClick={() => router.push("/")}
         >
           <Navbar.Brand className='relative'>
-            {icons.phoenixLogo}{" "}
+            {icons.phoenixLogo}
           </Navbar.Brand>
         </div>
         <Navbar.Collapse id='navbarScroll'>
           <Nav className='me-auto my-2 my-lg-0 navvRes' navbarScroll>
             <NavDropdown title='About TPG' className="mx-[1rem]" id='basic-nav-dropdown'>
-              <NavDropdown.Item href='#action/3.2'>
+              <NavDropdown.Item
+                onClick={() => window.scrollTo({
+                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 2550,
+                  behavior: 'smooth'
+                })}>
                 Achievements
               </NavDropdown.Item>
 
-              <NavDropdown.Item href='#action/3.3'>Core team</NavDropdown.Item>
+              <NavDropdown.Item href='#action/3.3'
+                onClick={() => window.scrollTo({
+                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 4250,
+                  behavior: 'smooth'
+                })}
+              >Core team</NavDropdown.Item>
 
-              <NavDropdown.Item href='#action/3.4'>
-                Our journey so far
+              <NavDropdown.Item
+                onClick={() => window.open("https://drive.google.com/file/d/1XWn0oTddNYYPeevlqmdyM76mfAj3r-xA/view?usp=drive_link")}
+                style={{ display: 'flex' }} >
+                Our journey so far <span className="ml-4">{icons.linkTo}</span>
               </NavDropdown.Item>
 
-              <NavDropdown.Item href='#action/3.4'>Roadmap</NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() => window.scrollTo({
+                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 5150,
+                  behavior: 'smooth'
+                })}
+              >Roadmap</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title='TPG Chapters' className="mr-[1rem]" id='basic-nav-dropdown'>
-              <Link
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/ahmedabad"}
+                onClick={() => router.push("/chapters/ahmedabad")}
               >
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item >
                   Ahmedabad
                 </NavDropdown.Item>
-              </Link>
-              <Link
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/bhopal"}
+                onClick={() => router.push("/chapters/bhopal")}
               >
-                <NavDropdown.Item href='#action/3.2'>Bhopal</NavDropdown.Item>
-              </Link>
-              <Link
+                <NavDropdown.Item >Bhopal</NavDropdown.Item>
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/chennai"}
+                onClick={() => router.push("/chapters/chennai")}
               >
-                <NavDropdown.Item href='#action/3.2'>Chennai</NavDropdown.Item>
-              </Link>
-              <Link style={{ textDecoration: "none" }} href={"/chapters/delhi"}>
-                <NavDropdown.Item href='#action/3.2'>Delhi</NavDropdown.Item>
-              </Link>
-              <Link
+                <NavDropdown.Item >Chennai</NavDropdown.Item>
+              </div>
+              <div style={{ textDecoration: "none" }} onClick={() => router.push("/chapters/delhi")}>
+                <NavDropdown.Item >Delhi</NavDropdown.Item>
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/hyderabad"}
+                onClick={() => router.push("/chapters/hyderabad")}
               >
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item >
                   Hyderabad
                 </NavDropdown.Item>
-              </Link>
-              <Link
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/jaipur"}
+                onClick={() => router.push("/chapters/jaipur")}
               >
-                <NavDropdown.Item href='#action/3.2'>Jaipur</NavDropdown.Item>
-              </Link>
-              <Link
+                <NavDropdown.Item >Jaipur</NavDropdown.Item>
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/karnataka"}
+                onClick={() => router.push("/chapters/karnataka")}
               >
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item >
                   Karnataka
                 </NavDropdown.Item>
-              </Link>
-              <Link
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/kerala"}
+                onClick={() => router.push("/chapters/kerala")}
               >
-                <NavDropdown.Item href='#action/3.2'>Kerala</NavDropdown.Item>
-              </Link>
-              <Link
+                <NavDropdown.Item >Kerala</NavDropdown.Item>
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/kolkata"}
+                onClick={() => router.push("/chapters/kolkata")}
               >
-                <NavDropdown.Item href='#action/3.2'>Kolkata</NavDropdown.Item>
-              </Link>
-              <Link style={{ textDecoration: "none" }} href={"/chapters/pune"}>
-                <NavDropdown.Item href='#action/3.2'>Pune</NavDropdown.Item>
-              </Link>
-              <Link
+                <NavDropdown.Item >Kolkata</NavDropdown.Item>
+              </div>
+              <div style={{ textDecoration: "none" }} onClick={() => router.push("/chapters/pune")}>
+                <NavDropdown.Item >Pune</NavDropdown.Item>
+              </div>
+              <div
                 style={{ textDecoration: "none" }}
-                href={"/chapters/kualalumpur"}
+                onClick={() => router.push("/chapters/kualalumpur")}
               >
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item >
                   Kuala Lumpur
                 </NavDropdown.Item>
-              </Link>
+              </div>
             </NavDropdown>
 
             <Nav.Link onClick={() => router.push("/resources")}>

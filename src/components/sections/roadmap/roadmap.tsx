@@ -8,7 +8,7 @@ interface RoadmapProps {
 const Roadmap: FC<RoadmapProps> = ({ }) => {
     return <div>
 
-        <div className='mx-[5%]'>
+        <div className='mt-[4rem] sm:mt-0 mx-[5%]'>
             <p className="xl:flex xl:justify-start text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] text-center mb-0 m-auto w-full">
                 WHAT’S IN STORE
             </p>

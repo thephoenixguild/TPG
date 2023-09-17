@@ -25,7 +25,7 @@ const Events: FC<EventsProps> = ({ events, loading }) => {
 
   return (
     <div>
-      <div className='mt-[4rem] sm:mt-[0rem]'>
+      <div className='mt-[10rem] sm:mt-[0rem]'>
         <div className='subHeading'>Events</div>
         <div
           className={cx("heading", "flex lg:justify-start md:justify-center")}

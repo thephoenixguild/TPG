@@ -14,31 +14,31 @@ const TestimonialSlider: React.FC = () => {
     },
     {
       imageSrc: "author2.svg",
-      feedbackImg: "feedback1.svg",
+      feedbackImg: "feedback2.svg",
       name: "Lorem Ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
       imageSrc: "author3.svg",
-      feedbackImg: "feedback1.svg",
+      feedbackImg: "feedback3.svg",
       name: "Lorem De Ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
       imageSrc: "author4.svg",
-      feedbackImg: "feedback1.svg",
+      feedbackImg: "feedback4.svg",
       name: "Ms. Lorem R. Ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
       imageSrc: "author5.svg",
-      feedbackImg: "feedback1.svg",
+      feedbackImg: "feedback5.svg",
       name: "Ms. Lorem R. Ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
       imageSrc: "author6.svg",
-      feedbackImg: "feedback1.svg",
+      feedbackImg: "feedback6.svg",
       name: "Ms. Lorem R. Ipsum",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -73,12 +73,16 @@ const TestimonialSlider: React.FC = () => {
           id='right-arrow'
           className='arrow right fa fa-chevron-right'
           onClick={handleNextSlide}
-        ></span>
+        >
+          <Image src='right.svg' height={50} width={50} alt='left' />
+        </span>
         <span
           id='left-arrow'
           className='arrow left fa fa-chevron-left'
           onClick={handlePrevSlide}
-        ></span>
+        >
+          <Image src='left.svg' height={50} width={50} alt='left' />
+        </span>
         <ul id='testim-dots' className='dots'>
           {testimonials.map((_, index) => (
             <li
@@ -107,7 +111,7 @@ const TestimonialSlider: React.FC = () => {
                 key={index}
                 className={index === currentSlide ? "active" : ""}
               >
-                <p className='flex h-[10rem] w-[20rem] sm:w-[40vw] md:h-[10rem] sm:h-[50vh]'>
+                <p className='flex h-[10rem] w-[20rem] sm:w-[40vw] md:h-[20rem] md:w-[30rem] lg:h-[30rem] lg:w-[45rem] sm:h-[50vh]'>
                   {/* {icons.feedbackBox} */}
                   <Image
                     src={testimonial?.feedbackImg}

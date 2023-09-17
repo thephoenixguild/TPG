@@ -1,11 +1,10 @@
-export const getChapterData = (location: any) => {
+export const getChapterData = (location: string) => {
     switch (location) {
         case "ahmedabad":
             return {
                 name: "Ahmedabad",
                 logo: "/ahmedabad/logo.svg"
-            }
-            break;
+            };
         case "bhopal":
             return {
                 name: "Bhopal",
@@ -14,16 +13,22 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Shouryam Kumar",
                         position: "DIRECTOR",
-                        url: '/bhopal/shouryam.svg'
+                        url: '/bhopal/shouryam.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/shouryam-kumar-1109b7139/",
+                            twitter: "https://twitter.com/ShouryamK"
+                        }
                     },
                     {
                         name: "Ashutosh Jha",
                         position: "DIRECTOR",
-                        url: '/bhopal/ashutosh.svg'
+                        url: '/bhopal/ashutosh.svg',
+                        socialMedia: {
+                            twitter: "https://twitter.com/ashutosh887_"
+                        }
                     }
                 ]
-            }
-            break;
+            };
         case "chennai":
             return {
                 name: "Chennai",
@@ -32,26 +37,41 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Ovia Seshadri",
                         position: "DIRECTOR - PARTNERSHIP",
-                        url: '/chennai/ovia.svg'
+                        url: '/chennai/ovia.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/ovia-seshadri-14b75124",
+                            twitter: "https://twitter.com/ovia_seshadri"
+                        }
                     },
                     {
                         name: "Vennila Seshadri",
                         position: "DIRECTOR - SOCIAL MEDIA",
-                        url: '/chennai/vennila.svg'
+                        url: '/chennai/vennila.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/vennila-seshadri-9b286b192",
+                            twitter: "https://twitter.com/VennilaSeshadri"
+                        }
                     },
                     {
                         name: "Vairamuthu M",
                         position: "TECH LEAD",
-                        url: '/chennai/vairamuthu.svg'
+                        url: '/chennai/vairamuthu.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/vmmuthu31/",
+                            twitter: "https://twitter.com/Barfi_31"
+                        }
                     },
                     {
                         name: "Thirumurugan Sivalingam",
                         position: "TECH LEAD",
-                        url: '/chennai/thirumurugan.svg'
+                        url: '/chennai/thirumurugan.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/thiru-murugan-935464218/",
+                            twitter: "https://twitter.com/Thiru_levi"
+                        }
                     }
                 ]
-            }
-            break;
+            };
         case "delhi":
             return {
                 name: "Delhi",
@@ -59,27 +79,45 @@ export const getChapterData = (location: any) => {
                 members: [
                     {
                         name: "Gagandeep kaur",
-                        position: "DIRECTOR - social media",
-                        url: '/delhi/gagandeep.svg'
+                        position: "DIRECTOR - SOCIAL MEDIA",
+                        url: '/delhi/gagandeep.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/gagandeep-kaur-370669239/",
+                            twitter: "https://twitter.com/Gagandeep_1523",
+                            instagram: "https://www.instagram.com/gagandeepkaur_17/"
+                        }
                     },
                     {
                         name: "Prabhpreet Singh",
-                        position: "DIRECTOR - operations",
-                        url: '/delhi/prabhpreet.svg'
+                        position: "DIRECTOR - OPERATIONS",
+                        url: '/delhi/prabhpreet.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/prabhpreet-singh-387395191/",
+                            twitter: "https://twitter.com/_PrabhpreetSing",
+                            instagram: "https://www.instagram.com/prabhpreet.singh.0203/"
+                        }
                     },
                     {
                         name: "Yashika Chugh",
                         position: "DIRECTOR - COMMUNITY",
-                        url: '/delhi/yashika.svg'
+                        url: '/delhi/yashika.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/yashikac/",
+                            twitter: "https://twitter.com/YashikaChugh4"
+                        }
                     },
                     {
                         name: "Sneha Kumari",
-                        position: "director - tech",
-                        url: '/delhi/sneha.svg'
+                        position: "DIRECTOR - TECH",
+                        url: '/delhi/sneha.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/snehasharma76/",
+                            twitter: "https://twitter.com/audaciousSneha"
+                        }
                     }
                 ]
-            }
-            break;
+            };
+
         case "hyderabad":
             return {
                 name: "Hyderabad",
@@ -88,11 +126,15 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Venkatesh Kanchanpally",
                         position: "DIRECTOR - TECH",
-                        url: '/hyderabad/venkatesh.svg'
+                        url: '/hyderabad/venkatesh.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/venkatesh-kanchanpally-4010b650/",
+                            twitter: "https://twitter.com/thankseve"
+                        }
                     }
                 ]
-            }
-            break;
+            };
+
         case "jaipur":
             return {
                 name: "Jaipur",
@@ -101,11 +143,16 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Avani Agarwal",
                         position: "DIRECTOR",
-                        url: '/jaipur/avani.svg'
+                        url: '/jaipur/avani.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/avani-agarwal-49a927226",
+                            twitter: "https://twitter.com/AvaniAgarwal110",
+                            instagram: "https://instagram.com/tpg_jaipur_/"
+                        }
                     }
                 ]
-            }
-            break;
+            };
+
         case "karnataka":
             return {
                 name: "Karnataka",
@@ -114,17 +161,25 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Adi Bhagavath",
                         position: "DIRECTOR - OPERATIONS",
-                        url: '/karnataka/adi.svg'
-                    }
-                    ,
+                        url: '/karnataka/adi.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/adi-bhagavath",
+                            twitter: "https://twitter.com/BhagavathAdi"
+                        }
+                    },
                     {
                         name: "Saurabh Shetty",
                         position: "DIRECTOR - SOCIAL MEDIA",
-                        url: '/karnataka/saurabh.svg'
+                        url: '/karnataka/saurabh.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/saurabh-shetty-5b9281128",
+                            twitter: "https://twitter.com/Saurab9290",
+                            instagram: "https://www.instagram.com/sauraj9290/"
+                        }
                     }
                 ]
-            }
-            break;
+            };
+
         case "kerala":
             return {
                 name: "Kerala",
@@ -133,62 +188,98 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Aswin Lal S",
                         position: "DIRECTOR - OPERATIONS",
-                        url: '/kerala/aswin.svg'
-                    }
-                    ,
+                        url: '/kerala/aswin.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/aswinlals/",
+                            instagram: "https://instagram.com/aswinlals.lens"
+                        }
+                    },
                     {
                         name: "Harsha Johny",
                         position: "DIRECTOR - CONTENT",
-                        url: '/kerala/harsha.svg'
+                        url: '/kerala/harsha.svg',
+                        socialMedia: {
+                            linkedin: "https://linkedin.com/in/harsha-johny-5ab21b195",
+                            instagram: "https://www.instagram.com/harshajny/"
+                        }
                     },
                     {
                         name: "Nived Gop",
                         position: "DIRECTOR - COMMUNITY",
-                        url: '/kerala/nived.svg'
+                        url: '/kerala/nived.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/nived-gop-b22012236",
+                            instagram: "https://instagram.com/nivedgop"
+                        }
                     },
                     {
                         name: "Sneha Vijayan",
                         position: "DIRECTOR - OPERATIONS",
-                        url: '/kerala/sneha.svg'
+                        url: '/kerala/sneha.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/sneha-vijayan-0a8608169",
+                            twitter: "https://twitter.com/sne_vijayan",
+                            instagram: "https://www.instagram.com/wirl18/"
+                        }
                     },
                     {
                         name: "Divya Varalakshmi",
                         position: "TECH LEAD",
-                        url: '/kerala/divya.svg'
+                        url: '/kerala/divya.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/v-divya-vara-lakshmi-67611624b",
+                            twitter: "https://twitter.com/divya150803",
+                            instagram: "https://www.instagram.com/v_divya15/"
+                        }
                     },
                     {
                         name: "Diksha Srivastava",
                         position: "PARTNERSHIP LEAD",
-                        url: '/kerala/diksha.svg'
+                        url: '/kerala/diksha.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/diksha-srivastava-063730217",
+                            twitter: "https://twitter.com/diksha_mess"
+                        }
                     },
                     {
                         name: "Ishika Ishani",
                         position: "SOCIAL MEDIA LEAD",
-                        url: '/kerala/ishika.svg'
-                    }
-                ]
-            }
-            break;
+                        url: '/kerala/ishika.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/ishika-ishani-105281171",
+                            twitter: "https://twitter.com/ishikaishani",
+                            instagram: "https://www.instagram.com/ishikaishani/"
+                        }
+                    }]
+            };
 
-        case "kolkata":
+        case "mumbai":
             return {
-                name: "Kolkata",
-                logo: "/kolkata/logo.svg",
+                name: "Mumbai",
+                logo: "/mumbai/logo.svg",
                 members: [
                     {
-                        name: "Sumita Pathak",
-                        position: "DIRECTOR ",
-                        url: '/kolkata/sumita.svg'
-                    }
-                    ,
+                        name: "Shweta Bhattad",
+                        position: "DIRECTOR",
+                        url: '/mumbai/shweta.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/shweta-bhattad-962228169/",
+                            twitter: "https://twitter.com/shweta_bhattad",
+                            instagram: "https://www.instagram.com/shweta_bhattad/"
+                        }
+                    },
                     {
-                        name: "Sweta Shaw",
-                        position: "DIRECTOR ",
-                        url: '/kolkata/sweta.svg'
+                        name: "Pritish Wadhwa",
+                        position: "TECH LEAD",
+                        url: '/mumbai/pritish.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/pritishwadhwa/",
+                            twitter: "https://twitter.com/pritishwadhwa",
+                            instagram: "https://www.instagram.com/pritishwadhwa/"
+                        }
                     }
                 ]
-            }
-            break;
+            };
 
         case "pune":
             return {
@@ -197,29 +288,79 @@ export const getChapterData = (location: any) => {
                 members: [
                     {
                         name: "Shabbir Khan",
-                        position: "Director - partnership",
-                        url: '/pune/shabbir.svg'
+                        position: "DIRECTOR - PARTNERSHIP",
+                        url: '/pune/shabbir.svg',
+                        socialMedia: {
+                            googleDrive: "https://drive.google.com/file/d/1ZkpR6Dv2rfO78rh6D8D9xRp4xDmBVm34/view?usp=drivesdk",
+                            instagram: "https://www.instagram.com/shabbiryk/",
+                            linkedin: "https://www.linkedin.com/in/shabbiryk/",
+                            twitter: "https://twitter.com/shabbiryk"
+                        }
                     }
                     ,
                     {
                         name: "Gaurav Sarage",
                         position: "CONTENT + TECH LEAD",
-                        url: '/pune/gaurav.svg'
+                        url: '/pune/gaurav.svg',
+                        socialMedia: {
+                            instagram: "https://instagram.com/gauravsarage_19",
+                            linkedin: "https://linkedin.com/in/gaurav-sarage",
+                            twitter: "https://twitter.com/gauravsarage4"
+                        }
                     },
                     {
                         name: "Ishan Deshpande",
                         position: "PARTNERSHIP LEAD",
-                        url: '/pune/ishan.svg'
+                        url: '/pune/ishan.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/ishan-deshpande-700189228",
+                            twitter: "https://x.com/Ishandesh07?t=-n6oKiAP4i_Ui1hPJB2lWg&s=09"
+                        }
                     }
                     ,
                     {
                         name: "Onkar Falle",
                         position: "TECH LEAD",
-                        url: '/pune/onkar.svg'
+                        url: '/pune/onkar.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/onkarfalle/",
+                            twitter: "https://twitter.com/nko_load_gheu",
+                            googleDrive: "https://drive.google.com/drive/folders/1tN4SLaAGr0VQuhmkFk-E6PESu-Wl6wpO?usp=sharing",
+                            telegram: "https://drive.google.com/drive/folders/1TZKgNjVA3GmTIODyXKOKcNMNn2cNodqT?usp=drive_link",
+                            whatsapp: "https://chat.whatsapp.com/FszHWlMTBbF4v9Av0L8DNe"
+                        }
                     }
                 ]
-            }
-            break;
+            };
+
+        case "kolkata":
+            return {
+                name: "Kolkata",
+                logo: "/kolkata/logo.svg",
+                members: [
+                    {
+                        name: "Sumita Pathak",
+                        position: "DIRECTOR",
+                        url: '/kolkata/sumita.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/sumita-pathak-91699a215/",
+                            twitter: "https://twitter.com/SumitaPathak1",
+                            instagram: "https://www.instagram.com/httpsumita/"
+                        }
+                    },
+                    {
+                        name: "Sweta Shaw",
+                        position: "DIRECTOR",
+                        url: '/kolkata/sweta.svg',
+                        socialMedia: {
+                            linkedin: "https://www.linkedin.com/in/sweta-shaw/",
+                            twitter: "https://twitter.com/swetashaw_",
+                            instagram: "https://www.instagram.com/sweta.shaw__/"
+                        }
+                    }
+                ]
+            };
+
         case "kualalumpur":
             return {
                 name: "Kuala Lumpur",
@@ -228,19 +369,24 @@ export const getChapterData = (location: any) => {
                     {
                         name: "Yudhishthra Sugumaran",
                         position: "DIRECTOR",
-                        url: '/kuala/yudhistra.svg'
-                    }
-                    ,
+                        url: '/kuala/yudhistra.svg',
+                        socialMedia: {
+                            twitter: "https://twitter.com/0xYudhishthra"
+                        }
+                    },
                     {
                         name: "YeeChian",
                         position: "DIRECTOR",
-                        url: '/kuala/yeechian.svg'
+                        url: '/kuala/yeechian.svg',
+                        socialMedia: {
+                            twitter: "https://twitter.com/ycchian04"
+                        }
                     }
                 ]
-            }
-            break;
-        default:
-            break;
-    }
+            };
 
-}
+        default:
+            return null; // Return null if the location is not found
+    }
+};
+
