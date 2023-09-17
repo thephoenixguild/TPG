@@ -118,6 +118,9 @@ html {
     z-index: 3;
     width: 90% !important;
   }
+  .navBtn {
+    position: relative;
+  }
 }
 
 div {
@@ -202,7 +205,7 @@ body {
   align-items: center;
   gap: 6.186px;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
   .navBtn {
     cursor: pointer;
     font-size: 14px !important;
@@ -268,6 +271,9 @@ div.heading {
   }
   a.dropdown-item {
     text-align: center !important;
+  }
+  .navBtn {
+    margin-left: 2rem;
   }
 }
 
@@ -670,6 +676,11 @@ body {
     height: 30vh;
     top: 150%;
     right: 20%;
+  }
+  .navBtn {
+    position: relative;
+    left: -2rem;
+    margin: 2rem;
   }
 }
 
@@ -1125,6 +1136,10 @@ body {
   .testim .cont div p {
     line-height: 25px;
   }
+
+  .navbar-collapse {
+    max-width: 25rem !important;
+  }
 }
 /* Define keyframes for the animation */
 @keyframes slideAndFade {
@@ -1179,6 +1194,7 @@ a.dropdown-item {
   cursor: pointer;
   color: #aab0fe;
   padding: 1rem 1rem;
+  justify-content: center !important;
 }
 a.dropdown-item:hover {
   color: #aab0fe;

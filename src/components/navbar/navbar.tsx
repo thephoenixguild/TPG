@@ -154,42 +154,43 @@ const NavBar = () => {
             ></Nav.Link>
           </Nav>
           <div className={styles.iconsSocial}>
-            <div
-              className="ml-8 xl:ml-0"
-              style={{ alignSelf: "center" }}
-              onMouseEnter={() => setStyle({ ...style, icon1: true })}
-              onMouseLeave={() => setStyle({ ...style, icon1: false })}
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/company/the-phoenix-guild/?viewAsMember=true"
-                )
-              }
-            >
-              <LinkedIcon hovered={style.icon1} />
+            <div className="flex">
+              <div
+                className="ml-8 xl:ml-4"
+                style={{ alignSelf: "center" }}
+                onMouseEnter={() => setStyle({ ...style, icon1: true })}
+                onMouseLeave={() => setStyle({ ...style, icon1: false })}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/company/the-phoenix-guild/?viewAsMember=true"
+                  )
+                }
+              >
+                <LinkedIcon hovered={style.icon1} />
+              </div>
+              <div
+                className="ml-8 xl:ml-4"
+                style={{ alignSelf: "center" }}
+                onMouseEnter={() => setStyle({ ...style, icon2: true })}
+                onMouseLeave={() => setStyle({ ...style, icon2: false })}
+                onClick={() => window.open("https://twitter.com/PhoenixGuildHQ")}
+              >
+                <TwitterIcon hovered={style.icon2} />
+              </div>
+              <div
+                className="ml-8 xl:ml-4"
+                style={{ alignSelf: "center", marginRight: "10%" }}
+                onMouseEnter={() => setStyle({ ...style, icon3: true })}
+                onMouseLeave={() => setStyle({ ...style, icon3: false })}
+                onClick={() =>
+                  window.open(
+                    "https://instagram.com/phoenixguildhq?igshid=YmMyMTA2M2Y="
+                  )
+                }
+              >
+                <InstaIcon hovered={style.icon3} />
+              </div>
             </div>
-            <div
-              className="ml-8 xl:ml-0"
-              style={{ alignSelf: "center" }}
-              onMouseEnter={() => setStyle({ ...style, icon2: true })}
-              onMouseLeave={() => setStyle({ ...style, icon2: false })}
-              onClick={() => window.open("https://twitter.com/PhoenixGuildHQ")}
-            >
-              <TwitterIcon hovered={style.icon2} />
-            </div>
-            <div
-              className="ml-8 xl:ml-0"
-              style={{ alignSelf: "center", marginRight: "10%" }}
-              onMouseEnter={() => setStyle({ ...style, icon3: true })}
-              onMouseLeave={() => setStyle({ ...style, icon3: false })}
-              onClick={() =>
-                window.open(
-                  "https://instagram.com/phoenixguildhq?igshid=YmMyMTA2M2Y="
-                )
-              }
-            >
-              <InstaIcon hovered={style.icon3} />
-            </div>
-
             <div
               onClick={() => window.open("https://t.me/thephoenixguild")}
               className='w-[14rem] navBtn'
