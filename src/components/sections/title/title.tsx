@@ -268,7 +268,7 @@ const Title = () => {
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
                     TPG at ETH India{" "}
-                    <span onClick={() => window.open(count[1]?.link)} className='pl-4'>{icons.linkTo}</span>
+                    <span className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image
@@ -291,7 +291,7 @@ const Title = () => {
                 />
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
-                    ZK Day <span onClick={() => window.open(count[1]?.link)} className='pl-4'>{icons.linkTo}</span>
+                    ZK Day <span className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image
@@ -320,7 +320,7 @@ const Title = () => {
                   <div className='flex items-center justify-start w-[100%] text-[1.4rem]'>
                     {count[2]?.name}
                     <span
-                      //  onClick={() => window.open(count[2]?.link)}
+                      onClick={() => window.open(count[2]?.link)}
                       className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
