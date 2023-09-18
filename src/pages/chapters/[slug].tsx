@@ -40,12 +40,13 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                 </div> */}
                 <Image alt="banner" className='mt-[8rem] lg:mt-[4rem] rounded-3xl' src='/cover-chapter.svg'
                     height={169} width={1800} />
-                <div className='absolute bottom-[-58%] sm:bottom-[-2%] left-[40%] md:left-10 w-[80px] h-[80px] md:w-[90px] md:h-[90px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px]'>
+                <div className='absolute bottom-[-28%] sm:bottom-[-2%] left-[40%] md:left-10 w-[80px] 
+                h-[80px] md:w-[90px] md:h-[90px] lg:w-[150px] lg:h-[150px] xl:w-[200px] xl:h-[200px]'>
                     {/* @ts-ignore */}
                     <Image alt='tpg' src={data?.logo} layout='fill' />
                 </div>
-                <div className='font-raleway font-bold text-[#A8A1CB] relative mt-[3rem] text-[2rem] 
-                text-right  w-[75%] m-auto top-[-12rem] tracking-widest'>
+                <div className='font-raleway font-bold text-[#A8A1CB] relative mt-[3rem] sm:text-[2rem] 
+                text-right  w-[75%] m-auto top-[-3rem] md:top-[-5rem] lg:top-[-12rem] tracking-widest'>
                     {data?.name.toUpperCase()}
                 </div>
 
@@ -67,7 +68,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                     className="hidden md:text-left md:flex text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] font-medium w-[80%]"
                 >
                     The Phoenix Guild is a community-centric company focused on creating meaningful and quality learning resources in the Web3 ecosystem.
-                    <br /> Our mission is to Onboard a million diverse #builders into the Web3 Ecosystem and Educate them about the technology and opportunities in the Web3 space.       </div>
+                    Our mission is to Onboard a million diverse #builders into the Web3 Ecosystem and Educate them about the technology and opportunities in the Web3 space.       </div>
 
                 <Row className="mt-4 justify-content-center">
                     {data?.members?.length && data?.members.map(member =>

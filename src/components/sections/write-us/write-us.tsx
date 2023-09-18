@@ -62,7 +62,7 @@ const WriteUs: FC<WriteUsProps> = () => {
                     <div className='w-[100%] m-auto items-center text-white text-center text-[20px] mb-[4%] font-bold lg:hidden'>
                         {formResponse?.message ? formResponse?.message : <> Write to us and <br className='sm:hidden' />  we’ll reach out to you </>}
                     </div>
-                    <p className=" text-[14px] lg:hidden xl:text-[20px] text-center mb-0 m-auto w-full">
+                    <p className=" text-[14px] text-[#AAB0FE] lg:hidden xl:text-[20px] text-center mb-0 m-auto w-full">
                         {!formResponse?.message ? "Fill out the form, and we’ll reply to you soon." : ""}
                     </p>
 
@@ -73,8 +73,8 @@ const WriteUs: FC<WriteUsProps> = () => {
                         {!formResponse?.message ? " Fill out the form, and we’ll reply to you soon." : ""}
                     </p>
 
-                    <div className='flex lg:justify-start justify-center mb-[2rem]'>
-                        <div className='flex mt-[2rem] w-[45%] md:w-[38%] lg:w-[7rem] justify-between'>
+                    <div className='flex lg:justify-start justify-center mb-[2rem] ml-[-5rem]'>
+                        <div className='flex mt-[2rem] w-[45%] md:w-[38%] lg:w-[7rem] justify-between '>
                             {links?.instagram && <div onClick={() => window.open(links?.instagram)} className='mr-6 cursor-pointer'>
                                 {icons.insta}
                             </div>}

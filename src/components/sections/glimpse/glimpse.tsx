@@ -22,8 +22,8 @@ const Glimpse: FC<GlimpseProps> = () => {
             then((response) => response.json())
             .then((result) => {
                 eventArr = result?.events;
-                let upcomingArr = eventArr.filter((eve: any) => !eve?.ongoing);
-                let pastArr = eventArr.filter((eve: any) => eve?.ongoing);
+                let upcomingArr = eventArr.filter((eve: any) => eve?.ongoing);
+                let pastArr = eventArr.filter((eve: any) => !eve?.ongoing);
 
                 setEvents({ ...events, upcoming: upcomingArr, past: pastArr });
                 setLoading(false);
