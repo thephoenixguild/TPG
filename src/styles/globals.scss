@@ -125,6 +125,16 @@ html {
     left: 14rem;
     top: 2rem;
   }
+  .navBarBtn {
+    top: 22rem;
+    left: 30%;
+    z-index: 0 !important;
+  }
+  a.dropdown-item {
+    z-index: 20 !important;
+    position: relative;
+    background-color: #080e2b;
+  }
 }
 
 div {
@@ -686,6 +696,13 @@ body {
     left: 2rem;
     margin: 2rem;
   }
+  .navBarBtn {
+    left: -2rem;
+  }
+}
+
+.navBarBtn {
+  @extend .navBtn;
 }
 
 .testim .cont div h2 {

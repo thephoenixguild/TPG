@@ -52,7 +52,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
 
             </div>
 
-            <div className='mt-[4rem] sm:mt-[8rem] sm:mx-[3.5rem]'>
+            <div className='mt-[4rem]  lg:mt-[4rem] sm:mx-[3.5rem]'>
 
                 <div className="text-[24px] lg:text-[34px] xl:text-[44px] text-white
                  font-bold text-center md:flex md:justify-start">
@@ -60,7 +60,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                 </div>
 
                 <div
-                    className="md:hidden text-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] font-medium w-[80%]"
+                    className="md:hidden text-center text-[#AAB0FE] text-[14px] lg:text-[16px] xl:text-[18px] font-medium"
                 >
                     The Phoenix Guild is a community-centric company focused on creating meaningful and quality learning resources in the Web3 ecosystem.
                     <br /> Our mission is to Onboard a million diverse #builders into the Web3 Ecosystem and Educate them about the technology and opportunities in the Web3 space.     </div>

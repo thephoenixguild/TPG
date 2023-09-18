@@ -193,7 +193,7 @@ const NavBar = () => {
             </div>
             <div
               onClick={() => window.open("https://t.me/thephoenixguild")}
-              className='w-[14rem] navBtn'
+              className='w-[14rem] navBarBtn absolute'
               style={{ height: "60px", width: "180px", fontWeight: "800" }}
             >
               Join Community
