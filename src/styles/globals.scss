@@ -697,12 +697,14 @@ body {
     margin: 2rem;
   }
   .navBarBtn {
-    left: -2rem;
+    position: relative;
+    transform: translateX(-2rem);
   }
 }
 
 .navBarBtn {
   @extend .navBtn;
+  position: static;
 }
 
 .testim .cont div h2 {
