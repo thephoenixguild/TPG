@@ -9,7 +9,7 @@ type eventsModalProps = {
   modalOn: any;
   selectedEvent: any;
   noCTA?: any;
-  past: boolean;
+  past?: boolean;
 };
 
 const EventsModal: FC<eventsModalProps> = ({
