@@ -20,8 +20,8 @@ const Events: FC<EventsProps> = ({ events, loading }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   useEffect(() => {
-    console.log(modalOn, "modalll");
-  }, [modalOn]);
+    console.log(events, "modalll");
+  }, [events]);
 
   return (
     <div>

@@ -1,10 +1,11 @@
-import { icons } from '@/components/icons/icons'
+import { LinkedIcon, TwitterIcon, icons } from '@/components/icons/icons'
 import Lottie from 'lottie-react'
 import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import complete from './complete.json'
 import { useRouter } from 'next/router'
+import { getChapterData } from '@/components/helpers/chapters'
 
 interface WriteUsProps {
 
@@ -13,9 +14,9 @@ interface WriteUsProps {
 const WriteUs: FC<WriteUsProps> = () => {
 
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const [links, setLinks] = useState<any>();
     const [formResponse, setFormResponse] = useState<any>(null);
     const location = useRouter().query.slug;
-
     async function sendFeedback() {
         const url = `${process.env.NEXT_PUBLIC_NAKSH}/account/sendTPGFeedback${location ? `?location=${location}` : `?location=main`}`;
 
@@ -45,8 +46,11 @@ const WriteUs: FC<WriteUsProps> = () => {
     }
 
     useEffect(() => {
-        console.log(formResponse, 'formResponse')
-    }, [formResponse])
+        if (location) {
+            const data = getChapterData(location!.toString())
+            setLinks(data);
+        }
+    }, [location])
 
 
 
@@ -71,12 +75,18 @@ const WriteUs: FC<WriteUsProps> = () => {
 
                     <div className='flex lg:justify-start justify-center mb-[2rem]'>
                         <div className='flex mt-[2rem] w-[45%] md:w-[38%] lg:w-[7rem] justify-between'>
-                            <div className='cursor-pointer'>
+                            {links?.instagram && <div onClick={() => window.open(links?.instagram)} className='mr-6 cursor-pointer'>
                                 {icons.insta}
-                            </div>
-                            <div className='cursor-pointer'>
+                            </div>}
+                            {links?.whatsApp && <div onClick={() => window.open(links?.whatsApp)} className='mr-6 cursor-pointer'>
                                 {icons.whatsapp}
-                            </div>
+                            </div>}
+                            {links?.twitter && <div onClick={() => window.open(links?.twitter)} className='mr-6 cursor-pointer'>
+                                <TwitterIcon chapter={'dsdsd'} />
+                            </div>}
+                            {links?.linkedin && <div onClick={() => window.open(links?.linkedin)} className='mr-6 cursor-pointer'>
+                                <LinkedIcon chapter={true} />
+                            </div>}
                         </div>
                     </div>
 

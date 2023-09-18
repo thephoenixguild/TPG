@@ -78,7 +78,8 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                     <div className='w-[90px] h-[98px] relative p-[10px] border-[#f5f2f840] border-1 rounded-lg'>
                                         <Image
                                             className='rounded-lg'
-                                            alt='Mountains'
+                                            alt='member'
+                                            priority={true}
                                             src={member?.url}
                                             layout='fill'
                                             objectFit='cover'
@@ -107,9 +108,10 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                                                 className='cursor-pointer mr-8 sm:mr-2'>
                                                 <TwitterIcon chapter={true} />
                                             </div>}
+                                        {/* @ts-ignore  */}
                                         {member?.socialMedia?.linkedin &&
-                                            <div
-                                                onClick={() => window.open(member?.socialMedia?.linkedin)}
+                                            // @ts-ignore 
+                                            <div onClick={() => window.open(member?.socialMedia?.linkedin)}
                                                 className='cursor-pointer mr-8 sm:mr-2'>
                                                 <LinkedIcon chapter={true} />
                                             </div>}
@@ -119,7 +121,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                         </Col>)}
                 </Row>
             </div>
-        </Layout>
+        </Layout >
         <div className='mx-[-1rem] mb-[-4rem]'>
             <WriteUs />
         </div>
@@ -128,7 +130,7 @@ const Chapters: FC<ChaptersProps> = ({ }) => {
                 <Footer />
             </div>
         </Layout>
-    </div>
+    </div >
 }
 
 export default Chapters

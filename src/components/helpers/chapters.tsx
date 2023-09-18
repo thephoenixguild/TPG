@@ -3,12 +3,15 @@ export const getChapterData = (location: string) => {
         case "ahmedabad":
             return {
                 name: "Ahmedabad",
+                twitter: "https://twitter.com/TpgAhmedabad",
                 logo: "/ahmedabad/logo.svg"
             };
         case "bhopal":
             return {
                 name: "Bhopal",
+                twitter: "https://twitter.com/bhopal_tpg",
                 logo: "/bhopal/logo.svg",
+                whatsApp: "https://chat.whatsapp.com/CIFDenFHFXA4unhLtcRaka",
                 members: [
                     {
                         name: "Shouryam Kumar",
@@ -16,7 +19,7 @@ export const getChapterData = (location: string) => {
                         url: '/bhopal/shouryam.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/shouryam-kumar-1109b7139/",
-                            twitter: "https://twitter.com/ShouryamK"
+                            twitter: "https://twitter.com/ShouryamK",
                         }
                     },
                     {
@@ -24,7 +27,7 @@ export const getChapterData = (location: string) => {
                         position: "DIRECTOR",
                         url: '/bhopal/ashutosh.svg',
                         socialMedia: {
-                            twitter: "https://twitter.com/ashutosh887_"
+                            twitter: "https://twitter.com/ashutosh887_",
                         }
                     }
                 ]
@@ -32,6 +35,9 @@ export const getChapterData = (location: string) => {
         case "chennai":
             return {
                 name: "Chennai",
+                twitter: "https://twitter.com/TPG_Chennai",
+                instagram: "https://instagram.com/tpg_chennai?igshid=MzNlNGNkZWQ4Mg==",
+                whatsApp: "https://chat.whatsapp.com/GKngyIS9VPqHRLfHZlkrH0",
                 logo: "/chennai/logo.svg",
                 members: [
                     {
@@ -40,7 +46,7 @@ export const getChapterData = (location: string) => {
                         url: '/chennai/ovia.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/ovia-seshadri-14b75124",
-                            twitter: "https://twitter.com/ovia_seshadri"
+                            twitter: "https://twitter.com/ovia_seshadri",
                         }
                     },
                     {
@@ -75,6 +81,10 @@ export const getChapterData = (location: string) => {
         case "delhi":
             return {
                 name: "Delhi",
+                twitter: "https://twitter.com/TPG_Delhi",
+                instagram: "https://instagram.com/tpg_delhi?igshid=NjIwNzIyMDk2Mg==",
+                linkedin: "https://www.linkedin.com/in/the-phoenix-guild-delhi-76b0a3285",
+                whatsApp: "https://chat.whatsapp.com/DJZOAu8ZVjUFk1J7FFWyKd",
                 logo: "/delhi/logo.svg",
                 members: [
                     {
@@ -84,7 +94,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/gagandeep-kaur-370669239/",
                             twitter: "https://twitter.com/Gagandeep_1523",
-                            instagram: "https://www.instagram.com/gagandeepkaur_17/"
+                            instagram: "https://www.instagram.com/gagandeepkaur_17/",
                         }
                     },
                     {
@@ -94,7 +104,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/prabhpreet-singh-387395191/",
                             twitter: "https://twitter.com/_PrabhpreetSing",
-                            instagram: "https://www.instagram.com/prabhpreet.singh.0203/"
+                            instagram: "https://www.instagram.com/prabhpreet.singh.0203/",
                         }
                     },
                     {
@@ -103,7 +113,7 @@ export const getChapterData = (location: string) => {
                         url: '/delhi/yashika.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/yashikac/",
-                            twitter: "https://twitter.com/YashikaChugh4"
+                            twitter: "https://twitter.com/YashikaChugh4",
                         }
                     },
                     {
@@ -112,7 +122,7 @@ export const getChapterData = (location: string) => {
                         url: '/delhi/sneha.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/snehasharma76/",
-                            twitter: "https://twitter.com/audaciousSneha"
+                            twitter: "https://twitter.com/audaciousSneha",
                         }
                     }
                 ]
@@ -121,6 +131,7 @@ export const getChapterData = (location: string) => {
         case "hyderabad":
             return {
                 name: "Hyderabad",
+                twitter: "https://twitter.com/TPGHyderabad",
                 logo: "/hyderabad/logo.svg",
                 members: [
                     {
@@ -129,7 +140,7 @@ export const getChapterData = (location: string) => {
                         url: '/hyderabad/venkatesh.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/venkatesh-kanchanpally-4010b650/",
-                            twitter: "https://twitter.com/thankseve"
+                            twitter: "https://twitter.com/thankseve",
                         }
                     }
                 ]
@@ -138,6 +149,12 @@ export const getChapterData = (location: string) => {
         case "jaipur":
             return {
                 name: "Jaipur",
+                twitter: "https://twitter.com/tpg_jaipur",
+                whatsApp: "https://chat.whatsapp.com/ItNoU2wIzYA7vlE13S7khV",
+
+                instagram: "https://www.instagram.com/tpg_jaipur_/",
+                telegram: "https://telegram.me/+iSyI0lX3A4c1OGRl",
+                linkedin: "https://www.linkedin.com/company/the-phoenix-guild-jaipur/",
                 logo: "/jaipur/logo.svg",
                 members: [
                     {
@@ -147,7 +164,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/avani-agarwal-49a927226",
                             twitter: "https://twitter.com/AvaniAgarwal110",
-                            instagram: "https://instagram.com/tpg_jaipur_/"
+                            instagram: "https://instagram.com/tpg_jaipur_/",
                         }
                     }
                 ]
@@ -156,6 +173,8 @@ export const getChapterData = (location: string) => {
         case "karnataka":
             return {
                 name: "Karnataka",
+                twitter: "https://twitter.com/TPG_Karnataka",
+                linkedin: "https://www.linkedin.com/in/tpg-karnataka",
                 logo: "/karnataka/logo.svg",
                 members: [
                     {
@@ -164,7 +183,8 @@ export const getChapterData = (location: string) => {
                         url: '/karnataka/adi.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/adi-bhagavath",
-                            twitter: "https://twitter.com/BhagavathAdi"
+                            twitter: "https://twitter.com/BhagavathAdi",
+                            whatsApp: "https://chat.whatsapp.com/CTCjCGnEmVwA7qSHhTkSht",
                         }
                     },
                     {
@@ -183,6 +203,9 @@ export const getChapterData = (location: string) => {
         case "kerala":
             return {
                 name: "Kerala",
+                twitter: "https://twitter.com/KeralaTpg",
+                instagram: "https://instagram.com/tpg_kerala?igshid=YTQwZjQ0NmI0OA==",
+                whatsApp: "https://chat.whatsapp.com/HiRdhdsTg8jFUPpZSJWlkB",
                 logo: "/kerala/logo.svg",
                 members: [
                     {
@@ -191,7 +214,7 @@ export const getChapterData = (location: string) => {
                         url: '/kerala/aswin.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/aswinlals/",
-                            instagram: "https://instagram.com/aswinlals.lens"
+                            instagram: "https://instagram.com/aswinlals.lens",
                         }
                     },
                     {
@@ -200,7 +223,7 @@ export const getChapterData = (location: string) => {
                         url: '/kerala/harsha.svg',
                         socialMedia: {
                             linkedin: "https://linkedin.com/in/harsha-johny-5ab21b195",
-                            instagram: "https://www.instagram.com/harshajny/"
+                            instagram: "https://www.instagram.com/harshajny/",
                         }
                     },
                     {
@@ -209,7 +232,7 @@ export const getChapterData = (location: string) => {
                         url: '/kerala/nived.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/nived-gop-b22012236",
-                            instagram: "https://instagram.com/nivedgop"
+                            instagram: "https://instagram.com/nivedgop",
                         }
                     },
                     {
@@ -229,7 +252,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/v-divya-vara-lakshmi-67611624b",
                             twitter: "https://twitter.com/divya150803",
-                            instagram: "https://www.instagram.com/v_divya15/"
+                            instagram: "https://www.instagram.com/v_divya15/",
                         }
                     },
                     {
@@ -238,7 +261,7 @@ export const getChapterData = (location: string) => {
                         url: '/kerala/diksha.svg',
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/diksha-srivastava-063730217",
-                            twitter: "https://twitter.com/diksha_mess"
+                            twitter: "https://twitter.com/diksha_mess",
                         }
                     },
                     {
@@ -265,7 +288,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/shweta-bhattad-962228169/",
                             twitter: "https://twitter.com/shweta_bhattad",
-                            instagram: "https://www.instagram.com/shweta_bhattad/"
+                            instagram: "https://www.instagram.com/shweta_bhattad/",
                         }
                     },
                     {
@@ -284,6 +307,8 @@ export const getChapterData = (location: string) => {
         case "pune":
             return {
                 name: "Pune",
+                twitter: "https://twitter.com/tpg_pune",
+                whatsApp: "https://chat.whatsapp.com/FszHWlMTBbF4v9Av0L8DNe",
                 logo: "/pune/logo.svg",
                 members: [
                     {
@@ -294,7 +319,7 @@ export const getChapterData = (location: string) => {
                             googleDrive: "https://drive.google.com/file/d/1ZkpR6Dv2rfO78rh6D8D9xRp4xDmBVm34/view?usp=drivesdk",
                             instagram: "https://www.instagram.com/shabbiryk/",
                             linkedin: "https://www.linkedin.com/in/shabbiryk/",
-                            twitter: "https://twitter.com/shabbiryk"
+                            twitter: "https://twitter.com/shabbiryk",
                         }
                     }
                     ,
@@ -345,7 +370,7 @@ export const getChapterData = (location: string) => {
                         socialMedia: {
                             linkedin: "https://www.linkedin.com/in/sumita-pathak-91699a215/",
                             twitter: "https://twitter.com/SumitaPathak1",
-                            instagram: "https://www.instagram.com/httpsumita/"
+                            instagram: "https://www.instagram.com/httpsumita/",
                         }
                     },
                     {
@@ -364,6 +389,7 @@ export const getChapterData = (location: string) => {
         case "kualalumpur":
             return {
                 name: "Kuala Lumpur",
+                twitter: "https://twitter.com/0xTPGKL",
                 logo: "/kuala/logo.svg",
                 members: [
                     {
@@ -377,7 +403,7 @@ export const getChapterData = (location: string) => {
                     {
                         name: "YeeChian",
                         position: "DIRECTOR",
-                        url: '/kuala/yeechian.svg',
+                        url: '/kuala/yeeChian.svg',
                         socialMedia: {
                             twitter: "https://twitter.com/ycchian04"
                         }

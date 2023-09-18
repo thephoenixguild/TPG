@@ -18,12 +18,14 @@ const Title = () => {
     {
       name: "TPG at ETH India",
       location: "Kochi , Kerala",
-      pic: "/eth.png"
+      pic: "/eth.png",
+      link: "https://lu.ma/yjcqsxq0"
     },
     {
       name: "ZK Day",
       location: "Istanbul, Turkey",
-      pic: "/zkDay.png"
+      pic: "/zkDay.png",
+      link: "https://drive.google.com/file/d/1Z26VDwDXeOYUIcjB2OdtDeM35D-ySymH/view?usp=drive_link"
     },
     {
       name: "Build-a-thon",
@@ -266,7 +268,7 @@ const Title = () => {
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
                     TPG at ETH India{" "}
-                    <span className='pl-4'>{icons.linkTo}</span>
+                    <span onClick={() => window.open(count[1]?.link)} className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image
@@ -289,7 +291,7 @@ const Title = () => {
                 />
                 <div className={styles.cardSub}>
                   <div className='flex items-center justify-start w-[80%] text-[1.4rem]'>
-                    ZK Day <span className='pl-4'>{icons.linkTo}</span>
+                    ZK Day <span onClick={() => window.open(count[1]?.link)} className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image
@@ -308,15 +310,18 @@ const Title = () => {
                 <CustomImage
                   imageClassName='rounded-3xl'
                   className={`!absolute left-[-5%] sm:left-[0%] h-[16rem] w-[19rem]
-                                 sm:h-[23rem] sm:w-[26rem] ${showTopCard ? "topCard" : "topCard2"
+                                 sm:h-[23rem] sm:w-[26rem] "topCard2"
                     }`}
                   url={count[2]?.pic}
                 />
                 <div
-                  className={showTopCard ? styles.cardSubAnim : styles.cardSub}
+                  className={styles.cardSub}
                 >
                   <div className='flex items-center justify-start w-[100%] text-[1.4rem]'>
-                    {count[2]?.name} <span className='pl-4'>{icons.linkTo}</span>
+                    {count[2]?.name}
+                    <span
+                      //  onClick={() => window.open(count[2]?.link)}
+                      className='pl-4'>{icons.linkTo}</span>
                   </div>
                   <div className='pt-[4%] flex justify-start'>
                     <Image

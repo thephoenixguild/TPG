@@ -9,12 +9,14 @@ type eventsModalProps = {
   modalOn: any;
   selectedEvent: any;
   noCTA?: any;
+  past: boolean;
 };
 
 const EventsModal: FC<eventsModalProps> = ({
   setModalOn,
   modalOn,
   selectedEvent,
+  past,
   noCTA,
 }) => {
   const isMobile = useWindowSize()?.width < 769;
@@ -142,7 +144,7 @@ const EventsModal: FC<eventsModalProps> = ({
                   className='w-[14rem] navBtn'
                   style={{ height: "60px", width: "180px", fontWeight: "800" }}
                 >
-                  Book event
+                  {past ? "Know more" : "Book event"}
                 </div>
               </div>
             </div>
