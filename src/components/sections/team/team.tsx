@@ -90,6 +90,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem] xl:mt-0'>
               <div className='h-[25rem] w-full relative z-0'>
                 <Image
+                  priority={true}
                   blurDataURL="/srilakshmi.svg"
                   layout='fill'
                   onClick={() =>
@@ -120,6 +121,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]  xl:mt-0'>
               <div className='h-[25rem] md:w-full relative z-0'>
                 <Image
+                  priority={true}
                   blurDataURL="/nivedita.svg"
                   layout='fill'
                   onClick={() =>
@@ -159,6 +161,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] w-full relative z-0'>
                 <Image
+                  priority={true}
                   blurDataURL="/bhavya.svg"
                   layout='fill'
                   onClick={() =>
@@ -198,6 +201,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] w-full relative z-0'>
                 <Image
+                  priority={true}
                   blurDataURL="/gnana.svg"
                   layout='fill'
 
@@ -238,6 +242,7 @@ const Team: FC<TeamProps> = () => {
             <Col xl={4} lg={4} md={12} className='my-[2rem]xl:mt-0'>
               <div className='h-[25rem] w-full relative z-0'>
                 <Image
+                  priority={true}
                   blurDataURL="/neda.svg"
                   layout='fill'
                   onClick={() =>
