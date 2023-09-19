@@ -42,7 +42,7 @@ const Title = () => {
         newCount.push(firstItem);
         return newCount;
       });
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
