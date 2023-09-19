@@ -17,7 +17,7 @@ const Title = () => {
   const [count, setCount] = useState([
     {
       name: "TPG at ETH India",
-      location: "Kochi , Kerala",
+      location: "Bangalore, India",
       pic: "/eth.png",
       link: "https://lu.ma/yjcqsxq0"
     },
@@ -162,8 +162,7 @@ const Title = () => {
                       delay: 0.2,
                     }}
                   >
-                    Onboarding a million women and non-binary #builders into the
-                    Web3 Ecosystem
+                    To create and onboard the next million diverse builders into the<br /> web3 ecosystem.
                   </motion.div>
                   <motion.div
                     className='text-center lg:hidden flex'
@@ -183,8 +182,7 @@ const Title = () => {
                       delay: 0.2,
                     }}
                   >
-                    Onboarding a million women and non-binary #builders into the
-                    Web3 Ecosystem
+                    To create and onboard the next million diverse builders into the <br /> web3 ecosystem.
                   </motion.div>
                 </div>
 

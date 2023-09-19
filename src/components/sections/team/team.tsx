@@ -113,7 +113,7 @@ const Team: FC<TeamProps> = () => {
                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>
                   CO-FOUNDER
                 </h6>
-                <h4 className='text-white font-bold'>Srilakshmi T.C</h4>
+                <h4 className='text-white font-bold'>Srilakshmi T.C {"->"}</h4>
               </div>
             </Col>
 
@@ -152,7 +152,7 @@ const Team: FC<TeamProps> = () => {
                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>
                   CO-FOUNDER
                 </h6>
-                <h4 className='text-white font-bold'>Nivedita Vivek</h4>
+                <h4 className='text-white font-bold'>Nivedita Vivek {"->"}</h4>
               </div>
             </Col>
 
@@ -191,7 +191,7 @@ const Team: FC<TeamProps> = () => {
                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>
                   CHIEF STRATEGY OFFICER
                 </h6>
-                <h4 className='text-white font-bold'>Bhavya Batra</h4>
+                <h4 className='text-white font-bold'>Bhavya Batra {"->"}</h4>
               </div>
             </Col>
 
@@ -231,7 +231,7 @@ const Team: FC<TeamProps> = () => {
                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>
                   TECHNICAL ADVISOR
                 </h6>
-                <h4 className='text-white font-bold'>Gnana Lakshmi</h4>
+                <h4 className='text-white font-bold'>Gnana Lakshmi {"->"}</h4>
               </div>
             </Col>
 
@@ -271,7 +271,7 @@ const Team: FC<TeamProps> = () => {
                 <h6 className='text-[#EF2A82] mt-[2rem] mb-[1rem]'>
                   HEAD OF OPERATIONS
                 </h6>
-                <h4 className='text-white font-bold'>Neda Ashraf</h4>
+                <h4 className='text-white font-bold'>Neda Ashraf {"->"}</h4>
               </div>
             </Col>
           </Row>

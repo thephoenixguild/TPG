@@ -2894,13 +2894,13 @@ function MobileRoadmap() {
 }
 
 
-function LinkTo() {
+function LinkTo({ nav }: any) {
     return (
         <svg
             className="cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
+            width={nav ? "18" : "22"}
+            height={nav ? "18" : "22"}
             fill="none"
             viewBox="0 0 22 22"
         >
@@ -3191,7 +3191,8 @@ export const icons = {
     tpgAvatar: <TPGChapterAvatar />,
     linked: <LinkedIcon />,
     feedbackBox: <FeedbackBox />,
-    linkTo: <LinkTo />
+    linkTo: <LinkTo />,
+    navLink: <LinkTo nav={true} />
 }
 
 

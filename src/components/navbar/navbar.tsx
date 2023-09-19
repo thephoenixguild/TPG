@@ -28,6 +28,18 @@ const NavBar = () => {
 
   const width = Number(useWindowSize());
 
+  // const redirectHandler = () => {
+
+  //   if (window.location.pathname.includes("chapters")) {
+  //     router.push('/');
+  //   } else {
+  //     window.scrollTo({
+  //       top: useWindowSize().width < 600 ? 800 : (600 < useWindowSize().width && useWindowSize().width < 1200) ? 1800 : 5150,
+  //       behavior: 'smooth'
+  //     })
+  //   }
+  // }
+
   return (
     <Navbar key={1} expand='lg' className='lg:mb-0 mb-[4rem] z-[1] relative'>
       <Container fluid className='mx-10'>
@@ -46,31 +58,74 @@ const NavBar = () => {
           <Nav className='me-auto my-2 my-lg-0 navvRes' navbarScroll>
             <NavDropdown title='About TPG' className="mx-[1rem]" id='basic-nav-dropdown'>
               <NavDropdown.Item
-                onClick={() => window.scrollTo({
-                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 2550,
-                  behavior: 'smooth'
-                })}>
+                onClick={
+                  () => {
+                    if (window.location.pathname.includes("chapters")) {
+                      router.push('/');
+                      setTimeout(() => {
+                        window.scrollTo({
+                          top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 2150,
+                          behavior: 'smooth'
+                        })
+                      }, 1000)
+                    } else {
+                      window.scrollTo({
+                        top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 2550,
+                        behavior: 'smooth'
+                      })
+                    }
+                  }
+                }
+              >
                 Achievements
               </NavDropdown.Item>
 
               <NavDropdown.Item href='#action/3.3'
-                onClick={() => window.scrollTo({
-                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 4250,
-                  behavior: 'smooth'
-                })}
+                onClick={
+                  () => {
+                    if (window.location.pathname.includes("chapters")) {
+                      router.push('/');
+                      setTimeout(() => {
+                        window.scrollTo({
+                          top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 3150,
+                          behavior: 'smooth'
+                        })
+                      }, 1000)
+                    } else {
+                      window.scrollTo({
+                        top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 3450,
+                        behavior: 'smooth'
+                      })
+                    }
+                  }
+                }
               >Core team</NavDropdown.Item>
 
               <NavDropdown.Item
                 onClick={() => window.open("https://drive.google.com/file/d/1XWn0oTddNYYPeevlqmdyM76mfAj3r-xA/view?usp=drive_link")}
-                style={{ display: 'flex' }} >
-                Our journey so far <span className="ml-4">{icons.linkTo}</span>
+                style={{ display: 'flex', alignItems: 'center' }} >
+                Our journey so far <span className="ml-4 flex ">{icons.navLink}</span>
               </NavDropdown.Item>
 
               <NavDropdown.Item
-                onClick={() => window.scrollTo({
-                  top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 5150,
-                  behavior: 'smooth'
-                })}
+                onClick={
+                  () => {
+                    if (window.location.pathname.includes("chapters")) {
+                      router.push('/');
+                      setTimeout(() => {
+                        window.scrollTo({
+                          top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 5150,
+                          behavior: 'smooth'
+                        })
+                      }, 1000)
+                    } else {
+                      window.scrollTo({
+                        top: width < 600 ? 800 : (600 < width && width < 1200) ? 1800 : 5150,
+                        behavior: 'smooth'
+                      })
+                    }
+                  }
+                }
               >Roadmap</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title='TPG Chapters' className="mr-[1rem]" id='basic-nav-dropdown'>
@@ -201,7 +256,7 @@ const NavBar = () => {
           </div>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar >
   );
 };
 
